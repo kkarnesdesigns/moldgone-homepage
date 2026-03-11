@@ -1,0 +1,142 @@
+/* ============================================
+   ANIMATIONS BACKUP - saved from index.html
+   To restore: paste back into <style> and re-add
+   'reveal' classes to HTML elements, plus JS below.
+============================================ */
+
+/* === UTILITY BAR PULSE === */
+/* .utility-live-dot */
+animation: pulse 2s infinite;
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; box-shadow: 0 0 0 0 rgba(62, 170, 53, 0.7); }
+  50% { opacity: 0.8; box-shadow: 0 0 0 6px rgba(62, 170, 53, 0); }
+}
+
+/* === HERO ANIMATIONS === */
+/* .hero-badge */
+animation: fadeInUp 0.8s ease-out;
+
+/* .hero h1 */
+animation: fadeInUp 0.8s ease-out 0.1s both;
+
+/* .hero p */
+animation: fadeInUp 0.8s ease-out 0.2s both;
+
+/* .hero-actions */
+animation: fadeInUp 0.8s ease-out 0.3s both;
+
+/* .hero-ratings */
+animation: fadeInUp 0.8s ease-out 0.4s both;
+
+/* === STAT ITEMS === */
+/* .stat-item */
+animation: fadeInUp 0.6s ease-out both;
+
+/* .stat-item:nth-child(1) */ animation-delay: 0.4s;
+/* .stat-item:nth-child(2) */ animation-delay: 0.5s;
+/* .stat-item:nth-child(3) */ animation-delay: 0.6s;
+/* .stat-item:nth-child(4) */ animation-delay: 0.7s;
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* === SCROLL REVEAL SYSTEM === */
+.reveal {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+.reveal-delay-4 { transition-delay: 0.4s; }
+
+/* === SVG MAP ANIMATION === */
+/* circle in service areas SVG */
+<animate attributeName="r" values="6;8;6" dur="2s" repeatCount="indefinite"/>
+
+/* === JAVASCRIPT === */
+/*
+    // Scroll reveal
+    const revealElements = document.querySelectorAll('.reveal');
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+
+    revealElements.forEach(el => revealObserver.observe(el));
+
+    // Animate stat numbers on scroll
+    const statNumbers = document.querySelectorAll('.stat-number');
+    const statsObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const el = entry.target;
+          const text = el.textContent;
+          const match = text.match(/(\d[\d,]*)/);
+          if (match) {
+            const target = parseInt(match[1].replace(/,/g, ''));
+            const suffix = text.replace(match[0], '');
+            const prefix = text.substring(0, text.indexOf(match[0]));
+            let current = 0;
+            const increment = Math.ceil(target / 40);
+            const timer = setInterval(() => {
+              current += increment;
+              if (current >= target) {
+                current = target;
+                clearInterval(timer);
+              }
+              el.textContent = prefix + current.toLocaleString() + suffix;
+            }, 30);
+          }
+          statsObserver.unobserve(el);
+        }
+      });
+    }, { threshold: 0.3 });
+
+    statNumbers.forEach(el => statsObserver.observe(el));
+*/
+
+/* === HTML ELEMENTS WITH 'reveal' CLASSES === */
+/*
+  Line ~2108: <div class="section-header reveal">
+  Line ~2114: <div class="service-card reveal reveal-delay-1">
+  Line ~2130: <div class="service-card reveal reveal-delay-2">
+  Line ~2146: <div class="service-card reveal reveal-delay-3">
+  Line ~2169: <div class="section-header reveal">
+  Line ~2175: <a ... class="path-card path-card--know reveal reveal-delay-1">
+  Line ~2191: <a ... class="path-card path-card--unsure reveal reveal-delay-2">
+  Line ~2215: <div class="why-content reveal">
+  Line ~2266: <div class="why-images reveal reveal-delay-2">
+  Line ~2285: <div class="section-header reveal">
+  Line ~2291: <div class="process-step reveal reveal-delay-1">
+  Line ~2296: <div class="process-step reveal reveal-delay-2">
+  Line ~2301: <div class="process-step reveal reveal-delay-3">
+  Line ~2306: <div class="process-step reveal reveal-delay-4">
+  Line ~2319: <div class="areas-content reveal">
+  Line ~2384: <div class="areas-map-wrapper reveal reveal-delay-2">
+  Line ~2436: <div class="section-header reveal">
+  Line ~2442: <div class="testimonial-card reveal reveal-delay-1">
+  Line ~2459: <div class="testimonial-card reveal reveal-delay-2">
+  Line ~2476: <div class="testimonial-card reveal reveal-delay-3">
+  Line ~2501: <div class="contact-form-content reveal">
+*/

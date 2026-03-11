@@ -113,14 +113,11 @@
       height: 8px;
       background: var(--green);
       border-radius: 50%;
-      animation: pulse 2s infinite;
+      /* animation removed */
       flex-shrink: 0;
     }
 
-    @keyframes pulse {
-      0%, 100% { opacity: 1; box-shadow: 0 0 0 0 rgba(62, 170, 53, 0.7); }
-      50% { opacity: 0.8; box-shadow: 0 0 0 6px rgba(62, 170, 53, 0); }
-    }
+    /* @keyframes pulse removed */
 
     /* ============================================
        HEADER
@@ -307,7 +304,6 @@
       letter-spacing: 0.06em;
       text-transform: uppercase;
       margin-bottom: 1.5rem;
-      animation: fadeInUp 0.8s ease-out;
     }
 
     .hero-badge svg {
@@ -322,7 +318,6 @@
       color: var(--white);
       line-height: 1.12;
       margin-bottom: 1.25rem;
-      animation: fadeInUp 0.8s ease-out 0.1s both;
     }
 
     .hero h1 .highlight {
@@ -336,14 +331,12 @@
       line-height: 1.7;
       margin-bottom: 2.25rem;
       max-width: 580px;
-      animation: fadeInUp 0.8s ease-out 0.2s both;
     }
 
     .hero-actions {
       display: flex;
       gap: 1rem;
       flex-wrap: wrap;
-      animation: fadeInUp 0.8s ease-out 0.3s both;
     }
 
     .btn-primary {
@@ -392,7 +385,6 @@
       gap: 1.5rem;
       margin-top: 2.5rem;
       flex-wrap: wrap;
-      animation: fadeInUp 0.8s ease-out 0.4s both;
     }
 
     .hero-rating {
@@ -464,17 +456,13 @@
       padding: 1.5rem 2rem;
       text-align: center;
       border-right: 1px solid rgba(255, 255, 255, 0.08);
-      animation: fadeInUp 0.6s ease-out both;
     }
 
     .stat-item:last-child {
       border-right: none;
     }
 
-    .stat-item:nth-child(1) { animation-delay: 0.4s; }
-    .stat-item:nth-child(2) { animation-delay: 0.5s; }
-    .stat-item:nth-child(3) { animation-delay: 0.6s; }
-    .stat-item:nth-child(4) { animation-delay: 0.7s; }
+    /* animation delays removed */
 
     .stat-number {
       font-family: var(--font-display);
@@ -493,16 +481,7 @@
       font-weight: 500;
     }
 
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(24px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
+    /* @keyframes fadeInUp removed */
 
     /* ============================================
        TRUST BAR
@@ -1800,21 +1779,7 @@
     /* ============================================
        SCROLL ANIMATIONS
     ============================================ */
-    .reveal {
-      opacity: 0;
-      transform: translateY(32px);
-      transition: opacity 0.7s ease-out, transform 0.7s ease-out;
-    }
-
-    .reveal.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    .reveal-delay-1 { transition-delay: 0.1s; }
-    .reveal-delay-2 { transition-delay: 0.2s; }
-    .reveal-delay-3 { transition-delay: 0.3s; }
-    .reveal-delay-4 { transition-delay: 0.4s; }
+    /* reveal animation system removed */
 
     /* ============================================
        RESPONSIVE
@@ -2401,9 +2366,7 @@
             <!-- D.C. diamond -->
             <rect x="262" y="148" width="30" height="30" rx="2" transform="rotate(45, 277, 163)" fill="#2EA3F2" opacity="0.25" stroke="#2EA3F2" stroke-width="1.5"/>
             <!-- Service area dots -->
-            <circle cx="277" cy="163" r="6" fill="#2EA3F2" filter="url(#glow)">
-              <animate attributeName="r" values="6;8;6" dur="2s" repeatCount="indefinite"/>
-            </circle>
+            <circle cx="277" cy="163" r="6" fill="#2EA3F2" filter="url(#glow)"/>
             <text x="277" y="195" text-anchor="middle" fill="#0C1926" font-family="DM Sans, sans-serif" font-size="11" font-weight="700">WASHINGTON D.C.</text>
             <!-- Virginia cities -->
             <circle cx="240" cy="210" r="4" fill="#2EA3F2" opacity="0.7"/><text x="240" y="225" text-anchor="middle" fill="#475569" font-family="DM Sans, sans-serif" font-size="8">Alexandria</text>
@@ -2637,49 +2600,6 @@
     window.addEventListener('scroll', () => {
       header.classList.toggle('scrolled', window.scrollY > 10);
     });
-
-    // Scroll reveal
-    const revealElements = document.querySelectorAll('.reveal');
-    const revealObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          revealObserver.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
-
-    revealElements.forEach(el => revealObserver.observe(el));
-
-    // Animate stat numbers on scroll
-    const statNumbers = document.querySelectorAll('.stat-number');
-    const statsObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const el = entry.target;
-          const text = el.textContent;
-          const match = text.match(/(\d[\d,]*)/);
-          if (match) {
-            const target = parseInt(match[1].replace(/,/g, ''));
-            const suffix = text.replace(match[0], '');
-            const prefix = text.substring(0, text.indexOf(match[0]));
-            let current = 0;
-            const increment = Math.ceil(target / 40);
-            const timer = setInterval(() => {
-              current += increment;
-              if (current >= target) {
-                current = target;
-                clearInterval(timer);
-              }
-              el.textContent = prefix + current.toLocaleString() + suffix;
-            }, 30);
-          }
-          statsObserver.unobserve(el);
-        }
-      });
-    }, { threshold: 0.5 });
-
-    statNumbers.forEach(el => statsObserver.observe(el));
 
     // Strip scroll attributes from Basin form iframe
     const formContainer = document.querySelector('.contact-form-embed');
