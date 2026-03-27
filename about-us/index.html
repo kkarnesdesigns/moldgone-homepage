@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | MoldGone - Family Owned Mold Remediation in D.C., Baltimore & MD/VA</title>
+  <meta name="description" content="MoldGone is a family-owned mold remediation company serving D.C., Baltimore, Maryland & Virginia. Meet the team behind 5,000+ completed projects.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800&family=Fira+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --blue: #29ABE2;
+      --blue-dark: #1E94C8;
+      --blue-deeper: #1578A5;
+      --green: #3EAA35;
+      --green-dark: #338D2B;
+      --green-deeper: #287322;
+      --navy: #0C1926;
+      --navy-light: #132438;
+      --charcoal: #1A2332;
+      --slate: #2A3A4E;
+      --gray-100: #F4F6F8;
+      --gray-200: #E2E8F0;
+      --gray-300: #CBD5E1;
+      --gray-400: #94A3B8;
+      --gray-500: #64748B;
+      --gray-600: #475569;
+      --white: #FFFFFF;
+      --red-emergency: #E53E3E;
+      --font-display: 'Lexend', -apple-system, sans-serif;
+      --font-body: 'Fira Sans', -apple-system, sans-serif;
+    }
+
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body { font-family: var(--font-body); font-weight: 400; color: var(--charcoal); background: var(--white); overflow-x: hidden; -webkit-font-smoothing: antialiased; }
+    img { max-width: 100%; height: auto; }
+    a { text-decoration: none; color: inherit; }
+
+    /* UTILITY BAR */
+    .utility-bar { background: var(--navy); color: var(--gray-300); font-size: 0.8125rem; padding: 0.5rem 0; letter-spacing: 0.02em; }
+    .utility-bar .container { display: flex; justify-content: space-between; align-items: center; }
+    .utility-bar a { color: var(--gray-300); transition: color 0.2s; }
+    .utility-bar a:hover { color: var(--blue); }
+    .utility-links { display: flex; gap: 1.5rem; align-items: center; }
+    .utility-links svg { width: 14px; height: 14px; margin-right: 4px; vertical-align: -2px; }
+    .emergency-phone { display: flex; align-items: center; gap: 0.5rem; font-weight: 600; color: var(--white); }
+    .emergency-phone .pulse-dot { width: 8px; height: 8px; background: var(--green); border-radius: 50%; flex-shrink: 0; }
+
+    /* HEADER */
+    .header { background: var(--white); position: sticky; top: 0; z-index: 1000; box-shadow: 0 1px 3px rgba(0,0,0,0.08); transition: box-shadow 0.3s; }
+    .header.scrolled { box-shadow: 0 4px 20px rgba(0,0,0,0.12); }
+    .header .container { display: flex; justify-content: space-between; align-items: center; padding-top: 0.75rem; padding-bottom: 0.75rem; }
+    .logo { display: flex; align-items: center; gap: 0.5rem; flex-shrink: 0; }
+    .logo img { height: 64px; width: auto; }
+    .nav-links { display: flex; gap: 2rem; align-items: center; list-style: none; }
+    .nav-links a { font-size: 0.9375rem; font-weight: 500; color: var(--charcoal); transition: color 0.2s; position: relative; padding: 0.25rem 0; }
+    .nav-links a::after { content: ''; position: absolute; bottom: -2px; left: 0; width: 0; height: 2px; background: var(--blue); transition: width 0.3s; }
+    .nav-links a:hover { color: var(--blue); }
+    .nav-links a:hover::after { width: 100%; }
+    .nav-links a.active { color: var(--blue); }
+    .nav-links a.active::after { width: 100%; }
+    .header-cta { display: inline-flex; align-items: center; gap: 0.5rem; background: var(--green); color: var(--white); padding: 0.75rem 1.5rem; border-radius: 6px; font-weight: 600; font-size: 0.9375rem; transition: all 0.3s; border: 2px solid var(--green); white-space: nowrap; }
+    .header-cta:hover { background: var(--green-dark); border-color: var(--green-dark); transform: translateY(-1px); box-shadow: 0 4px 12px rgba(62,170,53,0.35); }
+    .mobile-menu-btn { display: none; background: none; border: none; cursor: pointer; padding: 0.5rem; }
+    .mobile-menu-btn span { display: block; width: 24px; height: 2px; background: var(--charcoal); margin: 5px 0; transition: all 0.3s; }
+
+    /* CONTAINER */
+    .container { max-width: 1440px; margin-left: 5rem; margin-right: 5rem; padding-left: 1.5rem; padding-right: 1.5rem; }
+
+    /* SHARED */
+    .section-label { display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.8125rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--blue); margin-bottom: 1rem; }
+    .section-label::before { content: ''; width: 24px; height: 2px; background: var(--blue); }
+    .btn-primary { display: inline-flex; align-items: center; gap: 0.5rem; background: var(--green); color: var(--white); padding: 1rem 2rem; border-radius: 6px; font-weight: 600; font-size: 1rem; transition: all 0.3s; border: 2px solid var(--green); }
+    .btn-primary:hover { background: var(--green-dark); border-color: var(--green-dark); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(62,170,53,0.35); }
+    .btn-outline-blue { display: inline-flex; align-items: center; gap: 0.5rem; background: transparent; color: var(--blue); padding: 1rem 2rem; border-radius: 6px; font-weight: 600; font-size: 1rem; border: 2px solid var(--blue); transition: all 0.3s; }
+    .btn-outline-blue:hover { background: var(--blue); color: var(--white); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(41,171,226,0.3); }
+    .btn-white { display: inline-flex; align-items: center; gap: 0.5rem; background: var(--white); color: var(--blue-deeper); padding: 1rem 2rem; border-radius: 6px; font-weight: 700; font-size: 1rem; transition: all 0.3s; border: 2px solid var(--white); }
+    .btn-white:hover { background: transparent; color: var(--white); transform: translateY(-2px); }
+    .btn-outline-white { display: inline-flex; align-items: center; gap: 0.5rem; background: transparent; color: var(--white); padding: 1rem 2rem; border-radius: 6px; font-weight: 600; font-size: 1rem; border: 2px solid rgba(255,255,255,0.4); transition: all 0.3s; }
+    .btn-outline-white:hover { border-color: var(--white); background: rgba(255,255,255,0.1); transform: translateY(-2px); }
+
+    /* ============================================
+       PAGE HERO (ABOUT)
+    ============================================ */
+    .page-hero {
+      background: var(--navy);
+      padding: 5rem 0 6rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .page-hero::before {
+      content: '';
+      position: absolute;
+      top: -200px;
+      right: -200px;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(46, 163, 242, 0.08), transparent 70%);
+      pointer-events: none;
+    }
+
+    .page-hero .container {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .page-hero h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2.5rem, 5vw, 3.75rem);
+      font-weight: 800;
+      color: var(--white);
+      line-height: 1.12;
+      margin-bottom: 1.25rem;
+    }
+
+    .page-hero h1 .highlight { color: var(--blue); }
+
+    .page-hero p {
+      font-size: 1.125rem;
+      color: var(--gray-300);
+      line-height: 1.7;
+      max-width: 640px;
+      margin: 0 auto;
+    }
+
+    /* ============================================
+       STORY SECTION
+    ============================================ */
+    .story-section {
+      padding: 6rem 0;
+      background: var(--white);
+    }
+
+    .story-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    .story-content h2 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 3.5vw, 2.75rem);
+      font-weight: 700;
+      color: var(--navy);
+      line-height: 1.2;
+      margin-bottom: 1.25rem;
+    }
+
+    .story-content p {
+      font-size: 1.0625rem;
+      color: var(--gray-500);
+      line-height: 1.7;
+      margin-bottom: 1.25rem;
+    }
+
+    .story-image {
+      position: relative;
+    }
+
+    .story-image .img-main {
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 24px 48px rgba(0,0,0,0.12);
+    }
+
+    .story-image .img-main img {
+      width: 100%;
+      height: 420px;
+      object-fit: cover;
+      object-position: top center;
+      display: block;
+    }
+
+    .story-image .stat-badge {
+      position: absolute;
+      bottom: -20px;
+      right: -16px;
+      background: var(--green);
+      color: var(--white);
+      padding: 1.25rem;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 8px 24px rgba(62,170,53,0.4);
+    }
+
+    .stat-badge .number { font-family: var(--font-display); font-size: 2.25rem; font-weight: 800; line-height: 1; }
+    .stat-badge .text { font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; margin-top: 0.25rem; }
+
+    /* ============================================
+       TEAM SECTION
+    ============================================ */
+    .team-section {
+      padding: 6rem 0;
+      background: var(--gray-100);
+    }
+
+    .team-section .section-header {
+      text-align: center;
+      max-width: 640px;
+      margin: 0 auto 3.5rem;
+    }
+
+    .team-section .section-header h2 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 3.5vw, 2.75rem);
+      font-weight: 700;
+      color: var(--navy);
+      line-height: 1.2;
+      margin-bottom: 1rem;
+    }
+
+    .team-section .section-header p {
+      font-size: 1.0625rem;
+      color: var(--gray-500);
+      line-height: 1.7;
+    }
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+
+    .team-card {
+      background: var(--white);
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid var(--gray-200);
+      transition: all 0.3s;
+    }
+
+    .team-card:hover {
+      box-shadow: 0 12px 32px rgba(12,25,38,0.08);
+      transform: translateY(-4px);
+    }
+
+    .team-card-image {
+      height: 300px;
+      overflow: hidden;
+    }
+
+    .team-card-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+      display: block;
+    }
+
+    .team-card-body {
+      padding: 1.75rem;
+    }
+
+    .team-card h3 {
+      font-family: var(--font-display);
+      font-size: 1.375rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 0.25rem;
+    }
+
+    .team-card .team-role {
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--blue);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.75rem;
+    }
+
+    .team-card p {
+      font-size: 0.9375rem;
+      color: var(--gray-500);
+      line-height: 1.65;
+    }
+
+    /* ============================================
+       VALUES / DIFFERENTIATORS
+    ============================================ */
+    .values-section {
+      padding: 6rem 0;
+      background: var(--navy);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .values-section::before {
+      content: '';
+      position: absolute;
+      top: -200px;
+      right: -200px;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(46,163,242,0.08), transparent 70%);
+      pointer-events: none;
+    }
+
+    .values-section .section-header {
+      text-align: center;
+      max-width: 640px;
+      margin: 0 auto 3.5rem;
+    }
+
+    .values-section .section-header h2 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 3.5vw, 2.75rem);
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.2;
+      margin-bottom: 1rem;
+    }
+
+    .values-section .section-header p {
+      font-size: 1.0625rem;
+      color: var(--gray-400);
+      line-height: 1.7;
+    }
+
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.75rem;
+    }
+
+    .value-card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 12px;
+      padding: 2rem;
+      transition: all 0.3s;
+    }
+
+    .value-card:hover {
+      background: rgba(255,255,255,0.08);
+      border-color: rgba(41,171,226,0.2);
+      transform: translateY(-4px);
+    }
+
+    .value-card-icon {
+      width: 52px;
+      height: 52px;
+      background: rgba(62,170,53,0.15);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.25rem;
+    }
+
+    .value-card-icon svg { width: 24px; height: 24px; color: var(--green); }
+
+    .value-card h3 {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 0.75rem;
+    }
+
+    .value-card p { font-size: 0.9375rem; color: var(--gray-400); line-height: 1.65; }
+
+    /* ============================================
+       AWARDS
+    ============================================ */
+    .awards-section {
+      padding: 4rem 0;
+      background: var(--gray-100);
+      border-top: 1px solid var(--gray-200);
+      border-bottom: 1px solid var(--gray-200);
+    }
+
+    .awards-section .container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 3rem;
+      flex-wrap: wrap;
+    }
+
+    .awards-label {
+      font-size: 0.8125rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--gray-500);
+    }
+
+    .awards-logos {
+      display: flex;
+      align-items: center;
+      gap: 2.5rem;
+      flex-wrap: wrap;
+    }
+
+    .awards-logos img {
+      height: 56px;
+      width: auto;
+      opacity: 0.85;
+      transition: opacity 0.3s;
+    }
+
+    .awards-logos img:hover { opacity: 1; }
+
+    /* ============================================
+       TESTIMONIALS
+    ============================================ */
+    .testimonials { padding: 6rem 0; background: var(--white); }
+    .testimonials .section-header { text-align: center; max-width: 600px; margin: 0 auto 3.5rem; }
+    .testimonials .section-header h2 { font-family: var(--font-display); font-size: clamp(2rem, 3.5vw, 2.75rem); font-weight: 700; color: var(--navy); line-height: 1.2; margin-bottom: 1rem; }
+    .testimonials .section-header p { font-size: 1.0625rem; color: var(--gray-500); line-height: 1.7; }
+    .testimonials-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.75rem; }
+    .testimonial-card { background: var(--gray-100); border-radius: 12px; padding: 2rem; border: 1px solid var(--gray-200); transition: all 0.3s; }
+    .testimonial-card:hover { box-shadow: 0 12px 32px rgba(12,25,38,0.08); transform: translateY(-4px); }
+    .testimonial-stars { display: flex; gap: 2px; margin-bottom: 1rem; }
+    .testimonial-stars svg { width: 18px; height: 18px; color: #F6AD55; }
+    .testimonial-card blockquote { font-size: 0.9375rem; color: var(--gray-600); line-height: 1.7; margin-bottom: 1.5rem; font-style: italic; }
+    .testimonial-author { display: flex; align-items: center; gap: 0.75rem; padding-top: 1rem; border-top: 1px solid var(--gray-200); }
+    .testimonial-author-avatar { width: 42px; height: 42px; border-radius: 50%; background: linear-gradient(135deg, var(--blue), var(--blue-deeper)); display: flex; align-items: center; justify-content: center; color: var(--white); font-weight: 700; font-size: 0.875rem; flex-shrink: 0; }
+    .testimonial-author-info strong { display: block; font-size: 0.9375rem; color: var(--navy); }
+    .testimonial-author-info span { font-size: 0.8125rem; color: var(--gray-400); }
+
+    /* ============================================
+       CONTACT FORM
+    ============================================ */
+    .contact-form-section { padding: 5rem 0; background: var(--navy); position: relative; overflow: hidden; }
+    .contact-form-section::before { content: ''; position: absolute; top: -200px; left: -200px; width: 600px; height: 600px; background: radial-gradient(circle, rgba(41,171,226,0.1), transparent 70%); pointer-events: none; }
+    .contact-form-layout { display: grid; grid-template-columns: 1fr 1.3fr; gap: 4rem; align-items: start; }
+    .contact-form-content { padding-top: 1rem; }
+    .contact-form-content h2 { font-family: var(--font-display); font-size: clamp(2rem, 3.5vw, 2.75rem); font-weight: 800; color: var(--white); line-height: 1.2; margin-bottom: 1rem; }
+    .contact-form-content > p { font-size: 1.0625rem; color: var(--gray-400); line-height: 1.7; margin-bottom: 2rem; }
+    .contact-perks { display: flex; flex-direction: column; gap: 1.25rem; }
+    .contact-perk { display: flex; align-items: center; gap: 0.75rem; }
+    .contact-perk-icon { width: 36px; height: 36px; background: rgba(62,170,53,0.15); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .contact-perk-icon svg { width: 18px; height: 18px; color: var(--green); }
+    .contact-perk span { font-size: 0.9375rem; color: var(--gray-300); }
+    .contact-form-embed { background: #0F2B3D; border: 1px solid #163A52; border-radius: 16px; padding: 0; min-height: 400px; overflow: hidden; }
+    .contact-form-embed iframe { scrollbar-width: none; -ms-overflow-style: none; }
+    .contact-form-embed iframe::-webkit-scrollbar { display: none; }
+
+    /* ============================================
+       CTA BAND
+    ============================================ */
+    .cta-band { padding: 5rem 0; background: linear-gradient(135deg, var(--blue-deeper) 0%, var(--blue) 50%, var(--blue-dark) 100%); position: relative; overflow: hidden; }
+    .cta-band::before { content: ''; position: absolute; top: -50%; right: -20%; width: 600px; height: 600px; background: radial-gradient(circle, rgba(255,255,255,0.08), transparent 70%); pointer-events: none; }
+    .cta-band .container { display: flex; align-items: center; justify-content: space-between; position: relative; z-index: 1; }
+    .cta-band-content h2 { font-family: var(--font-display); font-size: clamp(1.75rem, 3vw, 2.5rem); font-weight: 700; color: var(--white); margin-bottom: 0.75rem; }
+    .cta-band-content p { font-size: 1.0625rem; color: rgba(255,255,255,0.8); max-width: 480px; }
+    .cta-band-actions { display: flex; gap: 1rem; flex-shrink: 0; }
+
+    /* ============================================
+       FOOTER
+    ============================================ */
+    .footer { background: var(--navy); color: var(--gray-400); padding: 4rem 0 0; }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1.25fr; gap: 3rem; padding-bottom: 3rem; border-bottom: 1px solid rgba(255,255,255,0.08); }
+    .footer-brand img { height: 44px; margin-bottom: 1.25rem; }
+    .footer-brand p { font-size: 0.9rem; line-height: 1.7; margin-bottom: 1.5rem; color: var(--gray-400); }
+    .footer-social { display: flex; gap: 0.75rem; }
+    .footer-social a { width: 36px; height: 36px; border-radius: 8px; background: rgba(255,255,255,0.06); display: flex; align-items: center; justify-content: center; transition: all 0.3s; }
+    .footer-social a:hover { background: var(--blue); transform: translateY(-2px); }
+    .footer-social svg { width: 16px; height: 16px; color: var(--gray-400); opacity: 0.5; display: block; }
+    .footer-social .social-icon-img { width: 16px; height: 16px; display: block; opacity: 0.35; object-fit: contain; }
+    .footer-social a:hover svg { color: var(--white); opacity: 1; }
+    .footer-social a:hover .social-icon-img { opacity: 0.85; }
+    .footer-col h4 { font-size: 0.875rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--white); margin-bottom: 1.25rem; }
+    .footer-col ul { list-style: none; }
+    .footer-col li { margin-bottom: 0.6rem; }
+    .footer-col a { font-size: 0.9rem; color: var(--gray-400); transition: color 0.2s; }
+    .footer-col a:hover { color: var(--blue); }
+    .footer-contact-item { display: flex; gap: 0.75rem; align-items: flex-start; margin-bottom: 1rem; }
+    .footer-contact-item svg { width: 18px; height: 18px; color: var(--blue); margin-top: 2px; flex-shrink: 0; }
+    .footer-contact-item a, .footer-contact-item p { font-size: 0.9rem; line-height: 1.5; }
+    .footer-bottom { padding: 1.5rem 0; display: flex; justify-content: space-between; align-items: center; font-size: 0.8125rem; color: var(--gray-500); }
+    .footer-bottom a { color: var(--gray-500); transition: color 0.2s; }
+    .footer-bottom a:hover { color: var(--blue); }
+    .footer-legal-links { display: flex; gap: 1.5rem; }
+
+    /* ============================================
+       RESPONSIVE
+    ============================================ */
+    @media (max-width: 1024px) {
+      .nav-links { display: none; }
+      .mobile-menu-btn { display: block; }
+      .story-grid { grid-template-columns: 1fr; gap: 3rem; }
+      .story-image { order: -1; }
+      .team-grid { grid-template-columns: 1fr 1fr; }
+      .values-grid { grid-template-columns: 1fr 1fr; }
+      .testimonials-grid { grid-template-columns: 1fr 1fr; }
+      .contact-form-layout { grid-template-columns: 1fr; gap: 2.5rem; }
+      .cta-band .container { flex-direction: column; text-align: center; gap: 2rem; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 768px) {
+      .utility-bar .container { flex-direction: column; gap: 0.5rem; text-align: center; }
+      .utility-links { display: none; }
+      .page-hero { padding: 4rem 0 4rem; }
+      .page-hero h1 { font-size: 2.25rem; }
+      .team-grid { grid-template-columns: 1fr; }
+      .values-grid { grid-template-columns: 1fr; }
+      .testimonials-grid { grid-template-columns: 1fr; }
+      .cta-band-actions { flex-direction: column; width: 100%; }
+      .cta-band-actions a { justify-content: center; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .footer-bottom { flex-direction: column; gap: 0.75rem; text-align: center; }
+    }
+
+    @media (max-width: 480px) {
+      .awards-logos { justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- UTILITY BAR -->
+  <div class="utility-bar">
+    <div class="container">
+      <div class="utility-links">
+        <a href="#">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          Careers
+        </a>
+        <a href="/moldgone-homepage/about-us/" class="active">About Us</a>
+        <a href="#">Gallery</a>
+        <a href="#">Reviews</a>
+      </div>
+      <a href="tel:2409706533" class="emergency-phone">
+        <span class="pulse-dot"></span>
+        24/7 Emergency Line: (240) 970-6533
+      </a>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <header class="header" id="header">
+    <div class="container">
+      <a href="/moldgone-homepage/" class="logo">
+        <img src="../moldgone_logo.png" alt="MoldGone">
+      </a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#">Services</a></li>
+          <li><a href="/moldgone-homepage/remediation/">Remediation</a></li>
+          <li><a href="/moldgone-homepage/reconstruction/">Reconstruction</a></li>
+          <li><a href="#">Air Quality</a></li>
+          <li><a href="#">Got Mold?</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <a href="#contact" class="header-cta">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        Get Free Estimate
+      </a>
+      <button class="mobile-menu-btn" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container">
+      <h1><span class="highlight">Family Owned.</span> Professionally Driven.</h1>
+      <p>MoldGone is not a franchise. We're a family-owned mold remediation company that delivers professional, personalized service to residential properties, commercial spaces, and everything in between.</p>
+    </div>
+  </section>
+
+  <!-- STORY SECTION -->
+  <section class="story-section">
+    <div class="container">
+      <div class="story-grid">
+        <div class="story-content">
+          <div class="section-label">Our Story</div>
+          <h2>Built on 26 Years of Executive Experience</h2>
+          <p>Our CEO and President, Joe Mulieri, spent 26 years as an executive at a major U.S. corporation. After completing his career in the private sector, Joe became interested in air quality issues, specifically mold and its effects on health.</p>
+          <p>That interest led Joe to get certified as a Mold Inspector and Remediator. The quality of his work and the thoroughness of his process quickly set MoldGone apart. Because of Joe's business ethics, MoldGone grew in reputation and expanded its service areas throughout Maryland, Virginia, and the District of Columbia.</p>
+          <p>Today, MoldGone employs 11 full-time staff members. All inspectors and management hold degrees from four-year institutions, and our certifications and credentials are among the highest and most respected in the industry.</p>
+        </div>
+        <div class="story-image">
+          <div class="img-main">
+            <img src="../About Us/imgi_8_Joe-Mulieri-1080x1440.jpg" alt="Joe Mulieri, CEO and President of MoldGone">
+          </div>
+          <div class="stat-badge">
+            <div class="number">20+</div>
+            <div class="text">Years of<br>Excellence</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEAM SECTION -->
+  <section class="team-section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label" style="justify-content: center;">Leadership</div>
+        <h2>Meet the Team Behind MoldGone</h2>
+        <p>Every member of our leadership team brings hands-on experience in mold remediation, construction, and project management.</p>
+      </div>
+      <div class="team-grid">
+        <div class="team-card">
+          <div class="team-card-image">
+            <img src="../About Us/imgi_8_Joe-Mulieri-1080x1440.jpg" alt="Joe Mulieri">
+          </div>
+          <div class="team-card-body">
+            <h3>Joe Mulieri</h3>
+            <div class="team-role">CEO &amp; President</div>
+            <p>26 years as an executive at a major U.S. corporation. Certified Mold Inspector and Remediator. Joe's business ethics and attention to quality are the foundation of everything MoldGone does.</p>
+          </div>
+        </div>
+        <div class="team-card">
+          <div class="team-card-image">
+            <img src="../About Us/imgi_9_jon.jpg" alt="Jon Gordon">
+          </div>
+          <div class="team-card-body">
+            <h3>Jon Gordon</h3>
+            <div class="team-role">Vice President</div>
+            <p>A close family friend who joined the team early on. Jon worked alongside Joe to expand MoldGone's service areas throughout Maryland, Virginia, and the District of Columbia.</p>
+          </div>
+        </div>
+        <div class="team-card">
+          <div class="team-card-image">
+            <img src="../About Us/imgi_10_mike-1080x850.jpg" alt="Mike Mulieri">
+          </div>
+          <div class="team-card-body">
+            <h3>Mike Mulieri</h3>
+            <div class="team-role">COO &amp; CFO</div>
+            <p>Joe's son. Master's Degree in Business from Loyola University. Certified mold inspector and remediator who has managed over 300 projects, bringing professional project management to every job.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VALUES -->
+  <section class="values-section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label" style="justify-content: center; color: var(--blue);">What Sets Us Apart</div>
+        <h2>Not Just Another Remediation Company</h2>
+        <p>From residential properties to private schools and commercial buildings, we constantly strive to find the most cost-effective way to fully address each and every mold concern.</p>
+      </div>
+      <div class="values-grid">
+        <div class="value-card">
+          <div class="value-card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h3>Construction-Trained Technicians</h3>
+          <p>Every MoldGone technician is trained specifically for mold treatment and remediation. They're also required to have construction experience, because many of our projects involve demolition and reconstruction.</p>
+        </div>
+        <div class="value-card">
+          <div class="value-card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20h20"/><path d="M5 20V8.2a1 1 0 0 1 .4-.8l6-4.5a1 1 0 0 1 1.2 0l6 4.5a1 1 0 0 1 .4.8V20"/><path d="M9 20v-6h6v6"/></svg>
+          </div>
+          <h3>Remediation + Reconstruction</h3>
+          <p>Most remediation companies leave you with bare studs. We handle the full rebuild too: carpentry, electrical, painting, HVAC cleaning, drywall, plumbing, and flooring. One team, one point of contact.</p>
+        </div>
+        <div class="value-card">
+          <div class="value-card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3>Top Industry Credentials</h3>
+          <p>All inspectors and management hold degrees from four-year institutions. Our certifications and credentials are among the highest and most respected in the mold remediation industry.</p>
+        </div>
+        <div class="value-card">
+          <div class="value-card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 9a2 2 0 0 1-2 2H6l-4 4V4c0-1.1.9-2 2-2h8a2 2 0 0 1 2 2v5Z"/><path d="M18 9h2a2 2 0 0 1 2 2v11l-4-4h-6a2 2 0 0 1-2-2v-1"/></svg>
+          </div>
+          <h3>Walk-You-Through-It Approach</h3>
+          <p>We explain every step of the process, make sure you understand the work being done, and keep you informed from start to finish. No jargon, no confusion, no surprises on the invoice.</p>
+        </div>
+        <div class="value-card">
+          <div class="value-card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="5" rx="2"/><line x1="2" x2="22" y1="10" y2="10"/></svg>
+          </div>
+          <h3>Transparent Pricing</h3>
+          <p>A detailed contract outlining treatment methods, locations, materials, and price is provided before work begins. We aim to return calls within 1 business day and fulfill appointments within 2.</p>
+        </div>
+        <div class="value-card">
+          <div class="value-card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <h3>Projects You Won't Forget</h3>
+          <p>From treating mold in a Catholic school's archive room with 100-year-old manuscripts, to removing mold from a 30-foot ceiling above a filled indoor pool, no project is too complex for our team.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AWARDS -->
+  <section class="awards-section">
+    <div class="container">
+      <span class="awards-label">Recognized By</span>
+      <div class="awards-logos">
+        <img src="../About Us/imgi_6_awards7.png" alt="Angi Super Service Award, BBB A+ Rating">
+        <img src="../IICRC-Logo.png" alt="IICRC Certified" style="filter: grayscale(100%); opacity: 0.6;">
+        <img src="../NAMP-Logo.jpg" alt="NAMP Member" style="filter: grayscale(100%); opacity: 0.6;">
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label" style="justify-content: center;">Testimonials</div>
+        <h2>Trusted by Homeowners &amp; Property Managers Across D.C. &amp; Baltimore</h2>
+        <p>Our reputation is built on results. Here's what our clients have to say about their experience with MoldGone.</p>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="testimonial-stars">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <blockquote>"Found extensive mold in our basement after a pipe leak. MoldGone responded within hours, set up containment the same day, and had the entire remediation complete in 3 days. Passed third-party clearance on the first test."</blockquote>
+          <div class="testimonial-author">
+            <div class="testimonial-author-avatar">SM</div>
+            <div class="testimonial-author-info">
+              <strong>Sarah M.</strong>
+              <span>Bethesda, MD</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <blockquote>"As a property manager handling 40+ units, I need vendors I can count on. MoldGone has been our go-to for mold issues for 5 years. Professional, reliable, and their documentation is impeccable for our records."</blockquote>
+          <div class="testimonial-author">
+            <div class="testimonial-author-avatar">JR</div>
+            <div class="testimonial-author-info">
+              <strong>James R.</strong>
+              <span>Arlington, VA</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <blockquote>"My kids were having respiratory issues and we didn't know why. MoldGone found hidden mold behind our bathroom walls. They handled everything including insurance paperwork. Symptoms cleared within a week of remediation."</blockquote>
+          <div class="testimonial-author">
+            <div class="testimonial-author-avatar">DP</div>
+            <div class="testimonial-author-info">
+              <strong>Diana P.</strong>
+              <span>Silver Spring, MD</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT FORM -->
+  <section class="contact-form-section" id="contact">
+    <div class="container">
+      <div class="contact-form-layout">
+        <div class="contact-form-content">
+          <div class="section-label">Get in Touch</div>
+          <h2>Let's Talk About Your Property</h2>
+          <p>Whether you need a mold inspection, remediation, or reconstruction, our team is ready to help. Fill out the form and we'll be in touch within 1 business day.</p>
+          <div class="contact-perks">
+            <div class="contact-perk">
+              <div class="contact-perk-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg>
+              </div>
+              <span>Free inspections, no obligation</span>
+            </div>
+            <div class="contact-perk">
+              <div class="contact-perk-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              </div>
+              <span>Same-day response for urgent situations</span>
+            </div>
+            <div class="contact-perk">
+              <div class="contact-perk-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              </div>
+              <span>Licensed, insured &amp; IICRC certified</span>
+            </div>
+            <div class="contact-perk">
+              <div class="contact-perk-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </div>
+              <span>Or call now: <a href="tel:2409706533" style="color: var(--blue); font-weight: 600;">(240) 970-6533</a></span>
+            </div>
+          </div>
+        </div>
+        <div class="contact-form-embed">
+          <div id="basin-form-wrapper">
+            <script src="https://hf.usebasin.com/hf/939aa749e4c8-c9d086f9c2e9.js" async></script>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BAND -->
+  <section class="cta-band">
+    <div class="container">
+      <div class="cta-band-content">
+        <h2>Let Us "Freshen Your World"</h2>
+        <p>Quality mold inspection, remediation, and reconstruction for residential and commercial properties across D.C., Baltimore, Maryland, and Virginia.</p>
+      </div>
+      <div class="cta-band-actions">
+        <a href="#contact" class="btn-white">
+          Schedule Free Inspection
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+        <a href="tel:2409706533" class="btn-outline-white">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Call (240) 970-6533
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="../moldgone_logo.png" alt="MoldGone">
+          <p>Trusted mold remediation experts serving the D.C. and Baltimore metro areas. Licensed, insured, and IICRC certified. Serving residential and commercial properties across Maryland and Virginia since 2006.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Facebook">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="#" aria-label="Google">
+              <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+            </a>
+            <a href="https://www.yelp.com/biz/moldgone-silver-spring" aria-label="Yelp" target="_blank" rel="noopener">
+              <img class="social-icon-img" src="https://s3-media0.fl.yelpcdn.com/assets/public/burst_white.yji-69d3bd788c1013a1c15e.svg" alt="Yelp">
+            </a>
+            <a href="https://www.angi.com/companylist/us/md/silver-spring/moldgone-net-reviews-9498270.htm" aria-label="Angi" target="_blank" rel="noopener">
+              <img class="social-icon-img" src="https://media.angi.com/s3fs-public/Angi-logo-Orange.svg" alt="Angi" style="filter: brightness(0) invert(1);">
+            </a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="/moldgone-homepage/remediation/">Mold Remediation</a></li>
+            <li><a href="#">Air Quality Testing</a></li>
+            <li><a href="/moldgone-homepage/reconstruction/">Reconstruction</a></li>
+            <li><a href="#">Mold Assessment</a></li>
+            <li><a href="#">All Services</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="/moldgone-homepage/about-us/">About Us</a></li>
+            <li><a href="#">Project Gallery</a></li>
+            <li><a href="#">Reviews</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <div class="footer-contact-item">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <a href="tel:2409706533">(240) 970-6533</a>
+          </div>
+          <div class="footer-contact-item">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            <a href="mailto:info@moldgone.net">info@moldgone.net</a>
+          </div>
+          <div class="footer-contact-item">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+            <p>Serving D.C., Baltimore<br>MD &amp; VA</p>
+          </div>
+          <div class="footer-contact-item">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <p>24/7 Emergency<br>Response Available</p>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 MoldGone.net. All rights reserved.</p>
+        <div class="footer-legal-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      header.classList.toggle('scrolled', window.scrollY > 10);
+    });
+
+    // Strip scroll attributes from Basin form iframe
+    const formContainer = document.querySelector('.contact-form-embed');
+    if (formContainer) {
+      const stripScroll = () => {
+        const iframe = formContainer.querySelector('iframe');
+        if (iframe) {
+          iframe.setAttribute('scrolling', 'no');
+          iframe.style.overflow = 'hidden';
+          iframe.style.scrollbarWidth = 'none';
+          iframe.style.background = 'transparent';
+          iframe.setAttribute('allowtransparency', 'true');
+          observer.disconnect();
+        }
+      };
+      const observer = new MutationObserver(stripScroll);
+      observer.observe(formContainer, { childList: true, subtree: true });
+    }
+  </script>
+</body>
+</html>
