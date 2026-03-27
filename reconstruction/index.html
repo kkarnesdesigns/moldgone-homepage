@@ -350,90 +350,83 @@
     }
 
     /* ============================================
-       PAGE HERO (SERVICE)
+       PAGE HERO (SPLIT LAYOUT)
     ============================================ */
     .page-hero {
       position: relative;
-      padding: 8rem 0 6rem;
       background: var(--navy);
       overflow: hidden;
     }
 
-    .page-hero-bg {
-      position: absolute;
-      inset: 0;
-      z-index: 1;
+    .page-hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: 520px;
     }
 
-    .page-hero-bg img {
+    .page-hero-content {
+      padding: 5rem 0 5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    .page-hero-image {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .page-hero-image img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      filter: brightness(0.3) saturate(0.7);
+      display: block;
     }
 
-    .page-hero-bg::after {
+    .page-hero-image::before {
       content: '';
       position: absolute;
       inset: 0;
       background: linear-gradient(
         to right,
-        rgba(12, 25, 38, 0.95) 0%,
-        rgba(12, 25, 38, 0.85) 35%,
-        rgba(12, 25, 38, 0.5) 60%,
-        rgba(12, 25, 38, 0.3) 100%
+        var(--navy) 0%,
+        rgba(12, 25, 38, 0.4) 30%,
+        transparent 60%
       );
+      z-index: 1;
     }
 
-    .page-hero .container {
-      position: relative;
-      z-index: 2;
-    }
-
-    .page-hero .breadcrumb {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      font-size: 0.875rem;
-      color: var(--gray-400);
-      margin-bottom: 1.5rem;
-    }
-
-    .page-hero .breadcrumb a {
-      color: var(--gray-400);
-      transition: color 0.2s;
-    }
-
-    .page-hero .breadcrumb a:hover {
-      color: var(--blue);
-    }
-
-    .page-hero .breadcrumb svg {
-      width: 14px;
-      height: 14px;
-      color: var(--gray-500);
+    .page-hero-image::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 30%;
+      background: linear-gradient(to top, rgba(12, 25, 38, 0.5), transparent);
+      z-index: 1;
     }
 
     .page-hero h1 {
       font-family: var(--font-display);
-      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-size: clamp(2.25rem, 4vw, 3.25rem);
       font-weight: 800;
       color: var(--white);
-      line-height: 1.12;
+      line-height: 1.15;
       margin-bottom: 1.25rem;
-      max-width: 700px;
     }
 
     .page-hero h1 .highlight {
       color: var(--blue);
     }
 
-    .page-hero p {
-      font-size: 1.1875rem;
+    .page-hero-content > p {
+      font-size: 1.0625rem;
       color: var(--gray-300);
       line-height: 1.7;
       margin-bottom: 2rem;
-      max-width: 600px;
     }
 
     .page-hero-actions {
@@ -444,26 +437,23 @@
 
     .page-hero-badges {
       display: flex;
-      gap: 1.5rem;
-      margin-top: 2.5rem;
+      gap: 1rem;
+      margin-top: 2.25rem;
       flex-wrap: wrap;
     }
 
     .hero-badge-item {
       display: flex;
       align-items: center;
-      gap: 0.6rem;
-      padding: 0.6rem 1rem;
-      background: rgba(255, 255, 255, 0.1);
-      border: 1px solid rgba(255, 255, 255, 0.15);
-      border-radius: 8px;
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
+      gap: 0.5rem;
+      font-size: 0.8125rem;
+      font-weight: 600;
+      color: var(--gray-300);
     }
 
     .hero-badge-item svg {
-      width: 18px;
-      height: 18px;
+      width: 16px;
+      height: 16px;
       color: var(--green);
       flex-shrink: 0;
     }
@@ -471,7 +461,7 @@
     .hero-badge-item span {
       font-size: 0.8125rem;
       font-weight: 600;
-      color: var(--white);
+      color: var(--gray-300);
     }
 
     /* ============================================
@@ -1160,6 +1150,12 @@
     @media (max-width: 1024px) {
       .nav-links { display: none; }
       .mobile-menu-btn { display: block; }
+      .page-hero-grid { grid-template-columns: 1fr; min-height: auto; }
+      .page-hero-image { height: 300px; }
+      .page-hero-image::before {
+        background: linear-gradient(to top, var(--navy) 0%, rgba(12, 25, 38, 0.3) 50%, transparent 100%);
+      }
+      .page-hero-content { padding: 3rem 0 3rem; }
       .overview-grid { grid-template-columns: 1fr; gap: 3rem; }
       .overview-images { order: -1; }
       .services-detail-grid { grid-template-columns: 1fr 1fr; }
@@ -1173,8 +1169,8 @@
     @media (max-width: 768px) {
       .utility-bar .container { flex-direction: column; gap: 0.5rem; text-align: center; }
       .utility-links { display: none; }
-      .page-hero { padding: 6rem 0 4rem; }
-      .page-hero h1 { font-size: 2.25rem; }
+      .page-hero-image { height: 240px; }
+      .page-hero h1 { font-size: 2rem; }
       .services-detail-grid { grid-template-columns: 1fr; }
       .ba-grid { grid-template-columns: 1fr; }
       .process-steps { grid-template-columns: 1fr; max-width: 320px; margin-left: auto; margin-right: auto; }
@@ -1242,42 +1238,37 @@
 
   <!-- PAGE HERO -->
   <section class="page-hero">
-    <div class="page-hero-bg">
-      <img src="../AdobeStock_190531909.jpeg" alt="Construction workers installing drywall during reconstruction">
-    </div>
-    <div class="container">
-      <div class="breadcrumb">
-        <a href="/">Home</a>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
-        <a href="/services/">Services</a>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
-        <span>Reconstruction</span>
+    <div class="page-hero-grid">
+      <div class="container page-hero-content">
+        <h1>Complete <span class="highlight">Reconstruction</span> After Mold Damage</h1>
+        <p>Don't settle for halfway done. Our licensed contractors restore your property to pre-loss condition after mold remediation -- from drywall and flooring to painting and trim work.</p>
+        <div class="page-hero-actions">
+          <a href="/contact-us/" class="btn-primary">
+            Get a Free Estimate
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
+          <a href="tel:2409706533" class="btn-secondary">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            (240) 970-6533
+          </a>
+        </div>
+        <div class="page-hero-badges">
+          <div class="hero-badge-item">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20h20"/><path d="M5 20V8.2a1 1 0 0 1 .4-.8l6-4.5a1 1 0 0 1 1.2 0l6 4.5a1 1 0 0 1 .4.8V20"/><path d="M9 20v-6h6v6"/></svg>
+            <span>Licensed Contractors</span>
+          </div>
+          <div class="hero-badge-item">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg>
+            <span>Pre-Loss Condition Guarantee</span>
+          </div>
+          <div class="hero-badge-item">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="5" rx="2"/><line x1="2" x2="22" y1="10" y2="10"/></svg>
+            <span>Insurance Coordination</span>
+          </div>
+        </div>
       </div>
-      <h1>Complete <span class="highlight">Reconstruction</span> After Mold Damage</h1>
-      <p>Don't settle for halfway done. Our licensed contractors restore your property to pre-loss condition after mold remediation -- from drywall and flooring to painting and trim work.</p>
-      <div class="page-hero-actions">
-        <a href="/contact-us/" class="btn-primary">
-          Get a Free Estimate
-          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-        </a>
-        <a href="tel:2409706533" class="btn-secondary">
-          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-          (240) 970-6533
-        </a>
-      </div>
-      <div class="page-hero-badges">
-        <div class="hero-badge-item">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20h20"/><path d="M5 20V8.2a1 1 0 0 1 .4-.8l6-4.5a1 1 0 0 1 1.2 0l6 4.5a1 1 0 0 1 .4.8V20"/><path d="M9 20v-6h6v6"/></svg>
-          <span>Licensed Contractors</span>
-        </div>
-        <div class="hero-badge-item">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg>
-          <span>Pre-Loss Condition Guarantee</span>
-        </div>
-        <div class="hero-badge-item">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="5" rx="2"/><line x1="2" x2="22" y1="10" y2="10"/></svg>
-          <span>Insurance Coordination</span>
-        </div>
+      <div class="page-hero-image">
+        <img src="../AdobeStock_190531909.jpeg" alt="Construction workers installing drywall during reconstruction">
       </div>
     </div>
   </section>
