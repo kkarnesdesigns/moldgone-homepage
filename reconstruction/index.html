@@ -468,7 +468,7 @@
     /* Image Collage */
     .hero-collage {
       position: relative;
-      height: 480px;
+      height: 560px;
       width: 100%;
     }
 
@@ -490,8 +490,8 @@
     }
 
     .hero-collage-img--1 {
-      width: 260px;
-      height: 260px;
+      width: 340px;
+      height: 300px;
       top: 0;
       left: 50%;
       transform: translateX(-50%);
@@ -499,16 +499,16 @@
     }
 
     .hero-collage-img--2 {
-      width: 220px;
-      height: 220px;
-      top: 35%;
+      width: 280px;
+      height: 250px;
+      top: 38%;
       right: 0;
       z-index: 1;
     }
 
     .hero-collage-img--3 {
-      width: 190px;
-      height: 190px;
+      width: 240px;
+      height: 220px;
       bottom: 0;
       left: 0;
       z-index: 1;
@@ -1048,6 +1048,106 @@
     }
 
     /* ============================================
+       CONTACT FORM
+    ============================================ */
+    .contact-form-section {
+      padding: 5rem 0;
+      background: var(--navy);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .contact-form-section::before {
+      content: '';
+      position: absolute;
+      top: -200px;
+      left: -200px;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(41, 171, 226, 0.1), transparent 70%);
+      pointer-events: none;
+    }
+
+    .contact-form-layout {
+      display: grid;
+      grid-template-columns: 1fr 1.3fr;
+      gap: 4rem;
+      align-items: start;
+    }
+
+    .contact-form-content {
+      padding-top: 1rem;
+    }
+
+    .contact-form-content h2 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 3.5vw, 2.75rem);
+      font-weight: 800;
+      color: var(--white);
+      line-height: 1.2;
+      margin-bottom: 1rem;
+    }
+
+    .contact-form-content > p {
+      font-size: 1.0625rem;
+      color: var(--gray-400);
+      line-height: 1.7;
+      margin-bottom: 2rem;
+    }
+
+    .contact-perks {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    .contact-perk {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .contact-perk-icon {
+      width: 36px;
+      height: 36px;
+      background: rgba(62, 170, 53, 0.15);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .contact-perk-icon svg {
+      width: 18px;
+      height: 18px;
+      color: var(--green);
+    }
+
+    .contact-perk span {
+      font-size: 0.9375rem;
+      color: var(--gray-300);
+    }
+
+    .contact-form-embed {
+      background: #0F2B3D;
+      border: 1px solid #163A52;
+      border-radius: 16px;
+      padding: 0;
+      min-height: 400px;
+      overflow: hidden;
+    }
+
+    .contact-form-embed iframe {
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+    }
+
+    .contact-form-embed iframe::-webkit-scrollbar {
+      display: none;
+    }
+
+    /* ============================================
        CTA BAND
     ============================================ */
     .cta-band {
@@ -1260,6 +1360,7 @@
       .process-steps { grid-template-columns: 1fr 1fr; gap: 2.5rem; }
       .process-steps::before { display: none; }
       .ba-grid { grid-template-columns: 1fr 1fr; }
+      .contact-form-layout { grid-template-columns: 1fr; gap: 2.5rem; }
       .cta-band .container { flex-direction: column; text-align: center; gap: 2rem; }
       .footer-grid { grid-template-columns: 1fr 1fr; }
     }
@@ -1269,10 +1370,10 @@
       .utility-links { display: none; }
       .page-hero { padding: 3rem 0 4rem; }
       .page-hero h1 { font-size: 2rem; }
-      .hero-collage { height: 320px; }
-      .hero-collage-img--1 { width: 200px; height: 200px; }
-      .hero-collage-img--2 { width: 170px; height: 170px; }
-      .hero-collage-img--3 { width: 150px; height: 150px; }
+      .hero-collage { height: 380px; }
+      .hero-collage-img--1 { width: 250px; height: 220px; }
+      .hero-collage-img--2 { width: 210px; height: 190px; }
+      .hero-collage-img--3 { width: 180px; height: 170px; }
       .services-detail-grid { grid-template-columns: 1fr; }
       .ba-grid { grid-template-columns: 1fr; }
       .process-steps { grid-template-columns: 1fr; max-width: 320px; margin-left: auto; margin-right: auto; }
@@ -1631,6 +1732,50 @@
     </div>
   </section>
 
+  <!-- CONTACT FORM -->
+  <section class="contact-form-section" id="contact">
+    <div class="container">
+      <div class="contact-form-layout">
+        <div class="contact-form-content">
+          <div class="section-label">Get Started</div>
+          <h2>Ready to Rebuild? Get a Free Estimate</h2>
+          <p>Fill out the form and we'll schedule a walkthrough to assess your reconstruction needs. Already have a remediation plan? We can coordinate both services.</p>
+          <div class="contact-perks">
+            <div class="contact-perk">
+              <div class="contact-perk-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg>
+              </div>
+              <span>Free detailed reconstruction estimate</span>
+            </div>
+            <div class="contact-perk">
+              <div class="contact-perk-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20h20"/><path d="M5 20V8.2a1 1 0 0 1 .4-.8l6-4.5a1 1 0 0 1 1.2 0l6 4.5a1 1 0 0 1 .4.8V20"/><path d="M9 20v-6h6v6"/></svg>
+              </div>
+              <span>One team for remediation &amp; rebuild</span>
+            </div>
+            <div class="contact-perk">
+              <div class="contact-perk-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="5" rx="2"/><line x1="2" x2="22" y1="10" y2="10"/></svg>
+              </div>
+              <span>Insurance claims handled for you</span>
+            </div>
+            <div class="contact-perk">
+              <div class="contact-perk-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </div>
+              <span>Or call now: <a href="tel:2409706533" style="color: var(--blue); font-weight: 600;">(240) 970-6533</a></span>
+            </div>
+          </div>
+        </div>
+        <div class="contact-form-embed">
+          <div id="basin-form-wrapper">
+            <script src="https://hf.usebasin.com/hf/939aa749e4c8-c9d086f9c2e9.js" async></script>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- CTA BAND -->
   <section class="cta-band">
     <div class="container">
@@ -1730,6 +1875,24 @@
     window.addEventListener('scroll', () => {
       header.classList.toggle('scrolled', window.scrollY > 10);
     });
+
+    // Strip scroll attributes from Basin form iframe
+    const formContainer = document.querySelector('.contact-form-embed');
+    if (formContainer) {
+      const stripScroll = () => {
+        const iframe = formContainer.querySelector('iframe');
+        if (iframe) {
+          iframe.setAttribute('scrolling', 'no');
+          iframe.style.overflow = 'hidden';
+          iframe.style.scrollbarWidth = 'none';
+          iframe.style.background = 'transparent';
+          iframe.setAttribute('allowtransparency', 'true');
+          observer.disconnect();
+        }
+      };
+      const observer = new MutationObserver(stripScroll);
+      observer.observe(formContainer, { childList: true, subtree: true });
+    }
 
     // FAQ accordion
     document.querySelectorAll('.faq-question').forEach(btn => {
