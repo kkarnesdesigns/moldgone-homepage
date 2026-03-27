@@ -1,0 +1,1086 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bethesda, MD Mold Inspection & Mold Remediation | MoldGone</title>
+  <meta name="description" content="Professional mold inspection, remediation, and reconstruction in Bethesda, MD. IICRC certified, licensed &amp; insured. Serving Bethesda neighborhoods including Bradley Hills, Burning Tree, Wyngate, and more.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800&family=Fira+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --blue: #29ABE2;
+      --blue-dark: #1E94C8;
+      --blue-deeper: #1578A5;
+      --green: #3EAA35;
+      --green-dark: #338D2B;
+      --green-deeper: #287322;
+      --navy: #0C1926;
+      --navy-light: #132438;
+      --charcoal: #1A2332;
+      --slate: #2A3A4E;
+      --gray-100: #F4F6F8;
+      --gray-200: #E2E8F0;
+      --gray-300: #CBD5E1;
+      --gray-400: #94A3B8;
+      --gray-500: #64748B;
+      --gray-600: #475569;
+      --white: #FFFFFF;
+      --red-emergency: #E53E3E;
+      --font-display: 'Lexend', -apple-system, sans-serif;
+      --font-body: 'Fira Sans', -apple-system, sans-serif;
+    }
+
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body { font-family: var(--font-body); font-weight: 400; color: var(--charcoal); background: var(--white); overflow-x: hidden; -webkit-font-smoothing: antialiased; }
+    img { max-width: 100%; height: auto; }
+    a { text-decoration: none; color: inherit; }
+
+    /* Dynamic/template text highlight for CMS reference */
+    .dynamic {
+      background: rgba(255, 220, 50, 0.25);
+      border-bottom: 2px dashed rgba(255, 180, 0, 0.6);
+      padding: 0 2px;
+    }
+
+    /* UTILITY BAR */
+    .utility-bar { background: var(--navy); color: var(--gray-300); font-size: 0.8125rem; padding: 0.5rem 0; letter-spacing: 0.02em; }
+    .utility-bar .container { display: flex; justify-content: space-between; align-items: center; }
+    .utility-bar a { color: var(--gray-300); transition: color 0.2s; }
+    .utility-bar a:hover { color: var(--blue); }
+    .utility-links { display: flex; gap: 1.5rem; align-items: center; }
+    .utility-links svg { width: 14px; height: 14px; margin-right: 4px; vertical-align: -2px; }
+    .emergency-phone { display: flex; align-items: center; gap: 0.5rem; font-weight: 600; color: var(--white); }
+    .emergency-phone .pulse-dot { width: 8px; height: 8px; background: var(--green); border-radius: 50%; flex-shrink: 0; }
+
+    /* HEADER */
+    .header { background: var(--white); position: sticky; top: 0; z-index: 1000; box-shadow: 0 1px 3px rgba(0,0,0,0.08); transition: box-shadow 0.3s; }
+    .header.scrolled { box-shadow: 0 4px 20px rgba(0,0,0,0.12); }
+    .header .container { display: flex; justify-content: space-between; align-items: center; padding-top: 0.75rem; padding-bottom: 0.75rem; }
+    .logo { display: flex; align-items: center; gap: 0.5rem; flex-shrink: 0; }
+    .logo img { height: 64px; width: auto; }
+    .nav-links { display: flex; gap: 2rem; align-items: center; list-style: none; }
+    .nav-links a { font-size: 0.9375rem; font-weight: 500; color: var(--charcoal); transition: color 0.2s; position: relative; padding: 0.25rem 0; }
+    .nav-links a::after { content: ''; position: absolute; bottom: -2px; left: 0; width: 0; height: 2px; background: var(--blue); transition: width 0.3s; }
+    .nav-links a:hover { color: var(--blue); }
+    .nav-links a:hover::after { width: 100%; }
+    .header-cta { display: inline-flex; align-items: center; gap: 0.5rem; background: var(--green); color: var(--white); padding: 0.75rem 1.5rem; border-radius: 6px; font-weight: 600; font-size: 0.9375rem; transition: all 0.3s; border: 2px solid var(--green); white-space: nowrap; }
+    .header-cta:hover { background: var(--green-dark); border-color: var(--green-dark); transform: translateY(-1px); box-shadow: 0 4px 12px rgba(62,170,53,0.35); }
+    .mobile-menu-btn { display: none; background: none; border: none; cursor: pointer; padding: 0.5rem; }
+    .mobile-menu-btn span { display: block; width: 24px; height: 2px; background: var(--charcoal); margin: 5px 0; transition: all 0.3s; }
+
+    /* CONTAINER */
+    .container { max-width: 1440px; margin-left: 5rem; margin-right: 5rem; padding-left: 1.5rem; padding-right: 1.5rem; }
+
+    /* SHARED */
+    .section-label { display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.8125rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--blue); margin-bottom: 1rem; }
+    .section-label::before { content: ''; width: 24px; height: 2px; background: var(--blue); }
+    .btn-primary { display: inline-flex; align-items: center; gap: 0.5rem; background: var(--green); color: var(--white); padding: 1rem 2rem; border-radius: 6px; font-weight: 600; font-size: 1rem; transition: all 0.3s; border: 2px solid var(--green); }
+    .btn-primary:hover { background: var(--green-dark); border-color: var(--green-dark); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(62,170,53,0.35); }
+    .btn-secondary { display: inline-flex; align-items: center; gap: 0.5rem; background: transparent; color: var(--white); padding: 1rem 2rem; border-radius: 6px; font-weight: 600; font-size: 1rem; border: 2px solid rgba(255,255,255,0.3); transition: all 0.3s; }
+    .btn-secondary:hover { border-color: var(--white); background: rgba(255,255,255,0.08); transform: translateY(-2px); }
+    .btn-white { display: inline-flex; align-items: center; gap: 0.5rem; background: var(--white); color: var(--blue-deeper); padding: 1rem 2rem; border-radius: 6px; font-weight: 700; font-size: 1rem; transition: all 0.3s; border: 2px solid var(--white); }
+    .btn-white:hover { background: transparent; color: var(--white); transform: translateY(-2px); }
+    .btn-outline-white { display: inline-flex; align-items: center; gap: 0.5rem; background: transparent; color: var(--white); padding: 1rem 2rem; border-radius: 6px; font-weight: 600; font-size: 1rem; border: 2px solid rgba(255,255,255,0.4); transition: all 0.3s; }
+    .btn-outline-white:hover { border-color: var(--white); background: rgba(255,255,255,0.1); transform: translateY(-2px); }
+
+    /* ============================================
+       HERO
+    ============================================ */
+    .hero {
+      position: relative;
+      min-height: 75vh;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      background: var(--navy);
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+    }
+
+    .hero-bg img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(0.3) saturate(0.7);
+    }
+
+    .hero-bg::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to right,
+        rgba(12, 25, 38, 0.95) 0%,
+        rgba(12, 25, 38, 0.85) 35%,
+        rgba(12, 25, 38, 0.5) 60%,
+        rgba(12, 25, 38, 0.25) 100%
+      );
+    }
+
+    .hero .container {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      padding: 4rem 0;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(46, 163, 242, 0.15);
+      border: 1px solid rgba(46, 163, 242, 0.3);
+      color: var(--blue);
+      padding: 0.5rem 1rem;
+      border-radius: 100px;
+      font-size: 0.8125rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-badge svg {
+      width: 16px;
+      height: 16px;
+    }
+
+    .hero h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 800;
+      color: var(--white);
+      line-height: 1.12;
+      margin-bottom: 1.25rem;
+    }
+
+    .hero h1 .highlight { color: var(--blue); }
+
+    .hero p {
+      font-size: 1.1875rem;
+      color: var(--gray-300);
+      line-height: 1.7;
+      margin-bottom: 2.25rem;
+      max-width: 580px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    /* ============================================
+       TRUST BAR
+    ============================================ */
+    .trust-bar {
+      background: var(--gray-100);
+      padding: 2rem 0;
+      border-bottom: 1px solid var(--gray-200);
+    }
+
+    .trust-bar .container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 3rem;
+      flex-wrap: wrap;
+    }
+
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      color: var(--gray-600);
+      font-size: 0.875rem;
+      font-weight: 500;
+    }
+
+    .trust-icon {
+      width: 40px;
+      height: 40px;
+      background: var(--white);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+      flex-shrink: 0;
+    }
+
+    .trust-icon svg { width: 22px; height: 22px; color: var(--green); }
+
+    /* ============================================
+       LOCAL CONTEXT
+    ============================================ */
+    .local-context {
+      padding: 6rem 0;
+      background: var(--white);
+    }
+
+    .local-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    .local-content h2 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 3.5vw, 2.75rem);
+      font-weight: 700;
+      color: var(--navy);
+      line-height: 1.2;
+      margin-bottom: 1.25rem;
+    }
+
+    .local-content p {
+      font-size: 1.0625rem;
+      color: var(--gray-500);
+      line-height: 1.7;
+      margin-bottom: 1.25rem;
+    }
+
+    .local-image {
+      position: relative;
+    }
+
+    .local-image .img-main {
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 24px 48px rgba(0,0,0,0.12);
+    }
+
+    .local-image .img-main img {
+      width: 100%;
+      height: 420px;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* ============================================
+       SERVICES
+    ============================================ */
+    .services {
+      padding: 6rem 0;
+      background: var(--gray-100);
+    }
+
+    .section-header {
+      max-width: 600px;
+      margin-bottom: 3.5rem;
+    }
+
+    .section-header h2 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 3.5vw, 2.75rem);
+      font-weight: 700;
+      color: var(--navy);
+      line-height: 1.2;
+      margin-bottom: 1rem;
+    }
+
+    .section-header p {
+      font-size: 1.0625rem;
+      color: var(--gray-500);
+      line-height: 1.7;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.75rem;
+    }
+
+    .service-card {
+      position: relative;
+      border-radius: 12px;
+      overflow: hidden;
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      cursor: pointer;
+    }
+
+    .service-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 40px rgba(12,25,38,0.12);
+      border-color: transparent;
+    }
+
+    .service-card-image { position: relative; height: 220px; overflow: hidden; }
+    .service-card-image img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+    .service-card:hover .service-card-image img { transform: scale(1.06); }
+    .service-card-image::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 60%; background: linear-gradient(to top, rgba(12,25,38,0.5), transparent); }
+
+    .service-card-body { padding: 1.75rem; }
+
+    .service-icon-wrap {
+      width: 52px; height: 52px;
+      background: linear-gradient(135deg, var(--green), var(--green-deeper));
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 1.25rem; margin-top: -42px;
+      position: relative; z-index: 2;
+      box-shadow: 0 4px 12px rgba(62,170,53,0.3);
+    }
+    .service-icon-wrap svg { width: 24px; height: 24px; color: var(--white); }
+
+    .service-card h3 { font-family: var(--font-display); font-size: 1.375rem; font-weight: 700; color: var(--navy); margin-bottom: 0.75rem; }
+    .service-card p { font-size: 0.9375rem; color: var(--gray-500); line-height: 1.65; margin-bottom: 1.25rem; }
+
+    .service-link { display: inline-flex; align-items: center; gap: 0.5rem; font-weight: 600; font-size: 0.9375rem; color: var(--blue); transition: gap 0.3s; }
+    .service-card:hover .service-link { gap: 0.75rem; }
+    .service-link svg { width: 16px; height: 16px; transition: transform 0.3s; }
+    .service-card:hover .service-link svg { transform: translateX(2px); }
+
+    /* ============================================
+       NEIGHBORHOODS
+    ============================================ */
+    .neighborhoods {
+      padding: 6rem 0;
+      background: var(--navy);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .neighborhoods::before {
+      content: '';
+      position: absolute;
+      top: -200px;
+      right: -200px;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(46,163,242,0.08), transparent 70%);
+      pointer-events: none;
+    }
+
+    .neighborhoods .section-header {
+      max-width: 640px;
+    }
+
+    .neighborhoods .section-header h2 {
+      color: var(--white);
+    }
+
+    .neighborhoods .section-header p {
+      color: var(--gray-400);
+    }
+
+    .neighborhoods-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+      margin-top: 2.5rem;
+    }
+
+    .neighborhood-tag {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 1rem 1.25rem;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 10px;
+      transition: all 0.3s;
+    }
+
+    .neighborhood-tag:hover {
+      background: rgba(255,255,255,0.08);
+      border-color: rgba(41,171,226,0.2);
+      transform: translateY(-2px);
+    }
+
+    .neighborhood-tag svg {
+      width: 16px;
+      height: 16px;
+      color: var(--green);
+      flex-shrink: 0;
+    }
+
+    .neighborhood-tag span {
+      font-size: 0.9375rem;
+      font-weight: 500;
+      color: var(--gray-300);
+    }
+
+    .neighborhoods-cta {
+      margin-top: 2.5rem;
+      padding-top: 2.5rem;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .neighborhoods-cta p {
+      font-size: 1.0625rem;
+      color: var(--gray-400);
+      max-width: 400px;
+    }
+
+    /* ============================================
+       WHY LOCAL
+    ============================================ */
+    .why-local {
+      padding: 6rem 0;
+      background: var(--white);
+    }
+
+    .why-local-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    .why-local-content h2 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 3.5vw, 2.75rem);
+      font-weight: 700;
+      color: var(--navy);
+      line-height: 1.2;
+      margin-bottom: 1.25rem;
+    }
+
+    .why-local-content > p {
+      font-size: 1.0625rem;
+      color: var(--gray-500);
+      line-height: 1.7;
+      margin-bottom: 2rem;
+    }
+
+    .why-features {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .why-feature {
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+    }
+
+    .why-feature-icon {
+      width: 44px; height: 44px;
+      background: rgba(62,170,53,0.1);
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .why-feature-icon svg { width: 20px; height: 20px; color: var(--green); }
+    .why-feature h4 { font-size: 1rem; font-weight: 600; color: var(--navy); margin-bottom: 0.25rem; }
+    .why-feature p { font-size: 0.875rem; color: var(--gray-500); line-height: 1.6; }
+
+    .why-local-image { position: relative; }
+    .why-local-image .img-main { border-radius: 12px; overflow: hidden; box-shadow: 0 24px 48px rgba(0,0,0,0.12); }
+    .why-local-image .img-main img { width: 100%; height: 420px; object-fit: cover; display: block; }
+
+    /* ============================================
+       TESTIMONIALS
+    ============================================ */
+    .testimonials { padding: 6rem 0; background: var(--gray-100); }
+    .testimonials .section-header { text-align: center; max-width: 600px; margin-left: auto; margin-right: auto; }
+    .testimonials-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.75rem; margin-top: 3.5rem; }
+    .testimonial-card { background: var(--white); border-radius: 12px; padding: 2rem; border: 1px solid var(--gray-200); transition: all 0.3s; }
+    .testimonial-card:hover { box-shadow: 0 12px 32px rgba(12,25,38,0.08); transform: translateY(-4px); }
+    .testimonial-stars { display: flex; gap: 2px; margin-bottom: 1rem; }
+    .testimonial-stars svg { width: 18px; height: 18px; color: #F6AD55; }
+    .testimonial-card blockquote { font-size: 0.9375rem; color: var(--gray-600); line-height: 1.7; margin-bottom: 1.5rem; font-style: italic; }
+    .testimonial-author { display: flex; align-items: center; gap: 0.75rem; padding-top: 1rem; border-top: 1px solid var(--gray-200); }
+    .testimonial-author-avatar { width: 42px; height: 42px; border-radius: 50%; background: linear-gradient(135deg, var(--blue), var(--blue-deeper)); display: flex; align-items: center; justify-content: center; color: var(--white); font-weight: 700; font-size: 0.875rem; flex-shrink: 0; }
+    .testimonial-author-info strong { display: block; font-size: 0.9375rem; color: var(--navy); }
+    .testimonial-author-info span { font-size: 0.8125rem; color: var(--gray-400); }
+
+    /* ============================================
+       CONTACT FORM
+    ============================================ */
+    .contact-form-section { padding: 5rem 0; background: var(--navy); position: relative; overflow: hidden; }
+    .contact-form-section::before { content: ''; position: absolute; top: -200px; left: -200px; width: 600px; height: 600px; background: radial-gradient(circle, rgba(41,171,226,0.1), transparent 70%); pointer-events: none; }
+    .contact-form-layout { display: grid; grid-template-columns: 1fr 1.3fr; gap: 4rem; align-items: start; }
+    .contact-form-content { padding-top: 1rem; }
+    .contact-form-content h2 { font-family: var(--font-display); font-size: clamp(2rem, 3.5vw, 2.75rem); font-weight: 800; color: var(--white); line-height: 1.2; margin-bottom: 1rem; }
+    .contact-form-content > p { font-size: 1.0625rem; color: var(--gray-400); line-height: 1.7; margin-bottom: 2rem; }
+    .contact-perks { display: flex; flex-direction: column; gap: 1.25rem; }
+    .contact-perk { display: flex; align-items: center; gap: 0.75rem; }
+    .contact-perk-icon { width: 36px; height: 36px; background: rgba(62,170,53,0.15); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .contact-perk-icon svg { width: 18px; height: 18px; color: var(--green); }
+    .contact-perk span { font-size: 0.9375rem; color: var(--gray-300); }
+    .contact-form-embed { background: #0F2B3D; border: 1px solid #163A52; border-radius: 16px; padding: 0; min-height: 400px; overflow: hidden; }
+    .contact-form-embed iframe { scrollbar-width: none; -ms-overflow-style: none; }
+    .contact-form-embed iframe::-webkit-scrollbar { display: none; }
+
+    /* ============================================
+       CTA BAND
+    ============================================ */
+    .cta-band { padding: 5rem 0; background: linear-gradient(135deg, var(--blue-deeper) 0%, var(--blue) 50%, var(--blue-dark) 100%); position: relative; overflow: hidden; }
+    .cta-band::before { content: ''; position: absolute; top: -50%; right: -20%; width: 600px; height: 600px; background: radial-gradient(circle, rgba(255,255,255,0.08), transparent 70%); pointer-events: none; }
+    .cta-band .container { display: flex; align-items: center; justify-content: space-between; position: relative; z-index: 1; }
+    .cta-band-content h2 { font-family: var(--font-display); font-size: clamp(1.75rem, 3vw, 2.5rem); font-weight: 700; color: var(--white); margin-bottom: 0.75rem; }
+    .cta-band-content p { font-size: 1.0625rem; color: rgba(255,255,255,0.8); max-width: 480px; }
+    .cta-band-actions { display: flex; gap: 1rem; flex-shrink: 0; }
+
+    /* ============================================
+       FOOTER
+    ============================================ */
+    .footer { background: var(--navy); color: var(--gray-400); padding: 4rem 0 0; }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1.25fr; gap: 3rem; padding-bottom: 3rem; border-bottom: 1px solid rgba(255,255,255,0.08); }
+    .footer-brand img { height: 44px; margin-bottom: 1.25rem; }
+    .footer-brand p { font-size: 0.9rem; line-height: 1.7; margin-bottom: 1.5rem; }
+    .footer-social { display: flex; gap: 0.75rem; }
+    .footer-social a { width: 36px; height: 36px; border-radius: 8px; background: rgba(255,255,255,0.06); display: flex; align-items: center; justify-content: center; transition: all 0.3s; }
+    .footer-social a:hover { background: var(--blue); transform: translateY(-2px); }
+    .footer-social svg { width: 16px; height: 16px; color: var(--gray-400); opacity: 0.5; display: block; }
+    .footer-social .social-icon-img { width: 16px; height: 16px; display: block; opacity: 0.35; object-fit: contain; }
+    .footer-social a:hover svg { color: var(--white); opacity: 1; }
+    .footer-social a:hover .social-icon-img { opacity: 0.85; }
+    .footer-col h4 { font-size: 0.875rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--white); margin-bottom: 1.25rem; }
+    .footer-col ul { list-style: none; }
+    .footer-col li { margin-bottom: 0.6rem; }
+    .footer-col a { font-size: 0.9rem; color: var(--gray-400); transition: color 0.2s; }
+    .footer-col a:hover { color: var(--blue); }
+    .footer-contact-item { display: flex; gap: 0.75rem; align-items: flex-start; margin-bottom: 1rem; }
+    .footer-contact-item svg { width: 18px; height: 18px; color: var(--blue); margin-top: 2px; flex-shrink: 0; }
+    .footer-contact-item a, .footer-contact-item p { font-size: 0.9rem; line-height: 1.5; }
+    .footer-bottom { padding: 1.5rem 0; display: flex; justify-content: space-between; align-items: center; font-size: 0.8125rem; color: var(--gray-500); }
+    .footer-bottom a { color: var(--gray-500); transition: color 0.2s; }
+    .footer-bottom a:hover { color: var(--blue); }
+    .footer-legal-links { display: flex; gap: 1.5rem; }
+
+    /* ============================================
+       RESPONSIVE
+    ============================================ */
+    @media (max-width: 1024px) {
+      .nav-links { display: none; }
+      .mobile-menu-btn { display: block; }
+      .local-grid { grid-template-columns: 1fr; gap: 3rem; }
+      .local-image { order: -1; }
+      .services-grid { grid-template-columns: 1fr 1fr; }
+      .neighborhoods-grid { grid-template-columns: repeat(3, 1fr); }
+      .why-local-grid { grid-template-columns: 1fr; gap: 3rem; }
+      .why-local-image { order: -1; }
+      .testimonials-grid { grid-template-columns: 1fr 1fr; }
+      .contact-form-layout { grid-template-columns: 1fr; gap: 2.5rem; }
+      .cta-band .container { flex-direction: column; text-align: center; gap: 2rem; }
+      .neighborhoods-cta { flex-direction: column; gap: 1.5rem; text-align: center; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 768px) {
+      .utility-bar .container { flex-direction: column; gap: 0.5rem; text-align: center; }
+      .utility-links { display: none; }
+      .hero { min-height: 70vh; }
+      .hero h1 { font-size: 2.25rem; }
+      .services-grid { grid-template-columns: 1fr; }
+      .neighborhoods-grid { grid-template-columns: repeat(2, 1fr); }
+      .testimonials-grid { grid-template-columns: 1fr; }
+      .cta-band-actions { flex-direction: column; width: 100%; }
+      .cta-band-actions a { justify-content: center; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .footer-bottom { flex-direction: column; gap: 0.75rem; text-align: center; }
+    }
+
+    @media (max-width: 480px) {
+      .hero-actions { flex-direction: column; }
+      .hero-actions a { justify-content: center; }
+      .neighborhoods-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- UTILITY BAR -->
+  <div class="utility-bar">
+    <div class="container">
+      <div class="utility-links">
+        <a href="#">Careers</a>
+        <a href="/moldgone-homepage/about-us/">About Us</a>
+        <a href="#">Gallery</a>
+        <a href="#">Reviews</a>
+      </div>
+      <a href="tel:2409706533" class="emergency-phone">
+        <span class="pulse-dot"></span>
+        24/7 Emergency Line: (240) 970-6533
+      </a>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <header class="header" id="header">
+    <div class="container">
+      <a href="/moldgone-homepage/" class="logo">
+        <img src="../../moldgone_logo.png" alt="MoldGone">
+      </a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#">Services</a></li>
+          <li><a href="/moldgone-homepage/remediation/">Remediation</a></li>
+          <li><a href="/moldgone-homepage/reconstruction/">Reconstruction</a></li>
+          <li><a href="#">Air Quality</a></li>
+          <li><a href="#">Got Mold?</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <a href="#contact" class="header-cta">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        Get Free Estimate
+      </a>
+      <button class="mobile-menu-btn" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg">
+      <img src="../../AdobeStock_348954876.jpeg" alt="Mold remediation technician treating wall in Bethesda property">
+    </div>
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+          Serving <span class="dynamic">Bethesda, MD</span>
+        </div>
+        <h1>Mold Inspection &amp; <span class="highlight">Remediation in <span class="dynamic">Bethesda</span></span></h1>
+        <p><span class="dynamic">Bethesda's older properties, humid summers, and mature tree canopy create ideal conditions for mold growth.</span> MoldGone provides fast, certified mold inspection, remediation, and reconstruction for <span class="dynamic">Bethesda</span> residents and businesses.</p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn-primary">
+            Schedule Free Inspection
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
+          <a href="tel:2409706533" class="btn-secondary">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            (240) 970-6533
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST BAR -->
+  <div class="trust-bar">
+    <div class="container">
+      <div class="trust-item">
+        <div class="trust-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        IICRC Certified
+      </div>
+      <div class="trust-item">
+        <div class="trust-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg></div>
+        Licensed &amp; Insured
+      </div>
+      <div class="trust-item">
+        <div class="trust-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+        5-Star Rated
+      </div>
+      <div class="trust-item">
+        <div class="trust-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+        24/7 Emergency Response
+      </div>
+      <div class="trust-item">
+        <div class="trust-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
+        Post-Remediation Guarantee
+      </div>
+    </div>
+  </div>
+
+  <!-- LOCAL CONTEXT -->
+  <section class="local-context">
+    <div class="container">
+      <div class="local-grid">
+        <div class="local-content">
+          <div class="section-label"><span class="dynamic">Bethesda</span> Mold Experts</div>
+          <h2>Why Mold Is Common in <span class="dynamic">Bethesda</span> Properties</h2>
+          <p><span class="dynamic">Bethesda's housing stock includes a mix of historic properties, mid-century colonials, and newer construction. Many of these properties have basements, crawlspaces, and aging plumbing that create the moisture conditions mold needs to thrive.</span></p>
+          <p><span class="dynamic">Montgomery County's humid summers and seasonal storms compound the problem. Water intrusion from heavy rains, poor drainage around foundations, and condensation in poorly ventilated spaces all contribute to mold growth that can go undetected for months.</span></p>
+          <p><span class="dynamic">MoldGone has been serving Bethesda and surrounding Montgomery County communities for over 20 years. We understand the local building styles, common moisture issues, and what it takes to keep properties in this area mold-free.</span></p>
+        </div>
+        <div class="local-image">
+          <div class="img-main">
+            <img src="../../AdobeStock_578309503.jpeg" alt="MoldGone remediation team working on a Bethesda property">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">Our <span class="dynamic">Bethesda</span> Services</div>
+        <h2>Complete Mold Solutions for <span class="dynamic">Bethesda</span> Homes &amp; Businesses</h2>
+        <p>From initial inspection through final reconstruction, MoldGone handles every step of the process for <span class="dynamic">Bethesda</span> properties.</p>
+      </div>
+      <div class="services-grid">
+        <a href="/moldgone-homepage/remediation/" class="service-card">
+          <div class="service-card-image">
+            <img src="../../AdobeStock_340728315.jpeg" alt="Technician spraying mold treatment in Bethesda">
+          </div>
+          <div class="service-card-body">
+            <div class="service-icon-wrap">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <h3>Mold Remediation</h3>
+            <p>Full containment, HEPA filtration, antimicrobial treatment, and safe removal of contaminated materials. We follow IICRC S520 protocols on every <span class="dynamic">Bethesda</span> project.</p>
+            <span class="service-link">
+              Learn More
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </span>
+          </div>
+        </a>
+        <div class="service-card">
+          <div class="service-card-image">
+            <img src="../../AdobeStock_293709929 (1).jpeg" alt="Inspector examining ceiling for mold in Bethesda">
+          </div>
+          <div class="service-card-body">
+            <div class="service-icon-wrap">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+            </div>
+            <h3>Mold Inspection</h3>
+            <p>Visual and instrument-based assessment to identify mold growth, moisture sources, and the full extent of contamination in your <span class="dynamic">Bethesda</span> property.</p>
+            <span class="service-link">
+              Learn More
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </span>
+          </div>
+        </div>
+        <a href="/moldgone-homepage/reconstruction/" class="service-card">
+          <div class="service-card-image">
+            <img src="../../AdobeStock_190531909.jpeg" alt="Workers installing drywall during Bethesda reconstruction">
+          </div>
+          <div class="service-card-body">
+            <div class="service-icon-wrap">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20h20"/><path d="M5 20V8.2a1 1 0 0 1 .4-.8l6-4.5a1 1 0 0 1 1.2 0l6 4.5a1 1 0 0 1 .4.8V20"/><path d="M9 20v-6h6v6"/></svg>
+            </div>
+            <h3>Reconstruction</h3>
+            <p>Full restoration of affected areas including drywall, flooring, painting, and finishing. We return your <span class="dynamic">Bethesda</span> property to pre-loss condition.</p>
+            <span class="service-link">
+              Learn More
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEIGHBORHOODS -->
+  <section class="neighborhoods">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label" style="color: var(--blue);"><span class="dynamic">Bethesda</span> Neighborhoods We Serve</div>
+        <h2>Mold Remediation Across Every <span class="dynamic">Bethesda</span> Community</h2>
+        <p><span class="dynamic">Our crews are familiar with Bethesda's neighborhoods, property types, and common mold issues. We serve every community in the area.</span></p>
+      </div>
+      <div class="neighborhoods-grid">
+        <div class="neighborhood-tag">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span class="dynamic">Bradley Hills</span>
+        </div>
+        <div class="neighborhood-tag">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span class="dynamic">Burning Tree</span>
+        </div>
+        <div class="neighborhood-tag">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span class="dynamic">Wyngate</span>
+        </div>
+        <div class="neighborhood-tag">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span class="dynamic">Alta Vista</span>
+        </div>
+        <div class="neighborhood-tag">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span class="dynamic">Greenwich Forest</span>
+        </div>
+        <div class="neighborhood-tag">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span class="dynamic">Bethesda Park</span>
+        </div>
+        <div class="neighborhood-tag">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span class="dynamic">Glen Echo Heights</span>
+        </div>
+        <div class="neighborhood-tag">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span class="dynamic">Kenwood</span>
+        </div>
+        <div class="neighborhood-tag">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span class="dynamic">Edgemoor</span>
+        </div>
+        <div class="neighborhood-tag">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span class="dynamic">Whitehall</span>
+        </div>
+        <div class="neighborhood-tag">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span class="dynamic">Wildwood</span>
+        </div>
+        <div class="neighborhood-tag">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span class="dynamic">Downtown Bethesda</span>
+        </div>
+      </div>
+      <div class="neighborhoods-cta">
+        <p><span class="dynamic">Don't see your neighborhood? We serve all of Bethesda and surrounding Montgomery County communities.</span></p>
+        <a href="#contact" class="btn-primary">
+          Check Your Area
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY LOCAL -->
+  <section class="why-local">
+    <div class="container">
+      <div class="why-local-grid">
+        <div class="why-local-image">
+          <div class="img-main">
+            <img src="../../imgi_13_Mold-Containment-1-1.jpg" alt="MoldGone containment barrier during Bethesda remediation">
+          </div>
+        </div>
+        <div class="why-local-content">
+          <div class="section-label">Why <span class="dynamic">Bethesda</span> Trusts MoldGone</div>
+          <h2><span class="dynamic">Your Neighbors Already Know Us</span></h2>
+          <p><span class="dynamic">MoldGone has completed thousands of projects across Montgomery County. Bethesda residents and property managers choose us because we deliver results, communicate clearly, and stand behind our work.</span></p>
+          <div class="why-features">
+            <div class="why-feature">
+              <div class="why-feature-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+              <div>
+                <h4>Fast Local Response</h4>
+                <p>Our crews are based in the D.C./Maryland metro area. We can be at your <span class="dynamic">Bethesda</span> property within hours for urgent situations.</p>
+              </div>
+            </div>
+            <div class="why-feature">
+              <div class="why-feature-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20h20"/><path d="M5 20V8.2a1 1 0 0 1 .4-.8l6-4.5a1 1 0 0 1 1.2 0l6 4.5a1 1 0 0 1 .4.8V20"/><path d="M9 20v-6h6v6"/></svg></div>
+              <div>
+                <h4>Full Remediation + Reconstruction</h4>
+                <p>We handle the mold and the rebuild. Carpentry, drywall, electrical, plumbing, painting, and flooring. One team, one invoice.</p>
+              </div>
+            </div>
+            <div class="why-feature">
+              <div class="why-feature-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="5" rx="2"/><line x1="2" x2="22" y1="10" y2="10"/></svg></div>
+              <div>
+                <h4>Insurance Coordination</h4>
+                <p>We work directly with your insurance company, handling documentation and claims to minimize out-of-pocket costs for <span class="dynamic">Bethesda</span> property owners.</p>
+              </div>
+            </div>
+            <div class="why-feature">
+              <div class="why-feature-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg></div>
+              <div>
+                <h4>Verified Results</h4>
+                <p>Third-party post-remediation testing confirms the job is done right. We don't consider it complete until clearance is passed.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label" style="justify-content: center;">What <span class="dynamic">Bethesda</span> Clients Say</div>
+        <h2>Trusted by Homeowners &amp; Property Managers in <span class="dynamic">Bethesda</span></h2>
+        <p>Our reputation is built on results. Here's what our clients have to say about their experience with MoldGone.</p>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="testimonial-stars">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <blockquote>"Found extensive mold in our basement after a pipe leak. MoldGone responded within hours, set up containment the same day, and had the entire remediation complete in 3 days. Passed third-party clearance on the first test."</blockquote>
+          <div class="testimonial-author">
+            <div class="testimonial-author-avatar">SM</div>
+            <div class="testimonial-author-info"><strong>Sarah M.</strong><span><span class="dynamic">Bethesda, MD</span></span></div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <blockquote>"As a property manager handling 40+ units, I need vendors I can count on. MoldGone has been our go-to for mold issues for 5 years. Professional, reliable, and their documentation is impeccable for our records."</blockquote>
+          <div class="testimonial-author">
+            <div class="testimonial-author-avatar">JR</div>
+            <div class="testimonial-author-info"><strong>James R.</strong><span>Arlington, VA</span></div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <blockquote>"My kids were having respiratory issues and we didn't know why. MoldGone found hidden mold behind our bathroom walls. They handled everything including insurance paperwork. Symptoms cleared within a week of remediation."</blockquote>
+          <div class="testimonial-author">
+            <div class="testimonial-author-avatar">DP</div>
+            <div class="testimonial-author-info"><strong>Diana P.</strong><span>Silver Spring, MD</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT FORM -->
+  <section class="contact-form-section" id="contact">
+    <div class="container">
+      <div class="contact-form-layout">
+        <div class="contact-form-content">
+          <div class="section-label">Get Started</div>
+          <h2>Schedule Your Free <span class="dynamic">Bethesda</span> Mold Inspection</h2>
+          <p>Fill out the form and one of our certified technicians will be in touch within 24 hours to schedule your inspection. For emergencies, call us directly.</p>
+          <div class="contact-perks">
+            <div class="contact-perk">
+              <div class="contact-perk-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg></div>
+              <span>100% free inspection, no obligation</span>
+            </div>
+            <div class="contact-perk">
+              <div class="contact-perk-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+              <span>Same-day response for urgent situations</span>
+            </div>
+            <div class="contact-perk">
+              <div class="contact-perk-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+              <span>Licensed, insured &amp; IICRC certified</span>
+            </div>
+            <div class="contact-perk">
+              <div class="contact-perk-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+              <span>Or call now: <a href="tel:2409706533" style="color: var(--blue); font-weight: 600;">(240) 970-6533</a></span>
+            </div>
+          </div>
+        </div>
+        <div class="contact-form-embed">
+          <div id="basin-form-wrapper">
+            <script src="https://hf.usebasin.com/hf/939aa749e4c8-c9d086f9c2e9.js" async></script>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BAND -->
+  <section class="cta-band">
+    <div class="container">
+      <div class="cta-band-content">
+        <h2><span class="dynamic">Bethesda's</span> Trusted Mold Experts</h2>
+        <p>Over 20 years of experience serving <span class="dynamic">Montgomery County</span>. Get a certified team on-site fast with a free inspection and detailed scope of work.</p>
+      </div>
+      <div class="cta-band-actions">
+        <a href="#contact" class="btn-white">
+          Schedule Free Inspection
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+        <a href="tel:2409706533" class="btn-outline-white">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Call (240) 970-6533
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="../../moldgone_logo.png" alt="MoldGone">
+          <p>Trusted mold remediation experts serving the D.C. and Baltimore metro areas. Licensed, insured, and IICRC certified. Serving residential and commercial properties across Maryland and Virginia since 2006.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Facebook"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+            <a href="#" aria-label="Google"><svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg></a>
+            <a href="https://www.yelp.com/biz/moldgone-silver-spring" aria-label="Yelp" target="_blank" rel="noopener"><img class="social-icon-img" src="https://s3-media0.fl.yelpcdn.com/assets/public/burst_white.yji-69d3bd788c1013a1c15e.svg" alt="Yelp"></a>
+            <a href="https://www.angi.com/companylist/us/md/silver-spring/moldgone-net-reviews-9498270.htm" aria-label="Angi" target="_blank" rel="noopener"><img class="social-icon-img" src="https://media.angi.com/s3fs-public/Angi-logo-Orange.svg" alt="Angi" style="filter: brightness(0) invert(1);"></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="/moldgone-homepage/remediation/">Mold Remediation</a></li>
+            <li><a href="#">Air Quality Testing</a></li>
+            <li><a href="/moldgone-homepage/reconstruction/">Reconstruction</a></li>
+            <li><a href="#">Mold Assessment</a></li>
+            <li><a href="#">All Services</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="/moldgone-homepage/about-us/">About Us</a></li>
+            <li><a href="#">Project Gallery</a></li>
+            <li><a href="#">Reviews</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <div class="footer-contact-item">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <a href="tel:2409706533">(240) 970-6533</a>
+          </div>
+          <div class="footer-contact-item">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            <a href="mailto:info@moldgone.net">info@moldgone.net</a>
+          </div>
+          <div class="footer-contact-item">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+            <p>Serving D.C., Baltimore<br>MD &amp; VA</p>
+          </div>
+          <div class="footer-contact-item">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <p>24/7 Emergency<br>Response Available</p>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 MoldGone.net. All rights reserved.</p>
+        <div class="footer-legal-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      header.classList.toggle('scrolled', window.scrollY > 10);
+    });
+
+    const formContainer = document.querySelector('.contact-form-embed');
+    if (formContainer) {
+      const stripScroll = () => {
+        const iframe = formContainer.querySelector('iframe');
+        if (iframe) {
+          iframe.setAttribute('scrolling', 'no');
+          iframe.style.overflow = 'hidden';
+          iframe.style.scrollbarWidth = 'none';
+          iframe.style.background = 'transparent';
+          iframe.setAttribute('allowtransparency', 'true');
+          observer.disconnect();
+        }
+      };
+      const observer = new MutationObserver(stripScroll);
+      observer.observe(formContainer, { childList: true, subtree: true });
+    }
+  </script>
+</body>
+</html>
