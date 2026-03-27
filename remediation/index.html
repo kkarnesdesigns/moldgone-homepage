@@ -1,0 +1,1562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mold Remediation Services | MoldGone - D.C., Baltimore & MD/VA</title>
+  <meta name="description" content="Professional mold remediation services in D.C., Baltimore, Maryland & Virginia. IICRC certified, EPA compliant. Containment, HEPA filtration, antimicrobial treatment & post-remediation verification.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800&family=Fira+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --blue: #29ABE2;
+      --blue-dark: #1E94C8;
+      --blue-deeper: #1578A5;
+      --green: #3EAA35;
+      --green-dark: #338D2B;
+      --green-deeper: #287322;
+      --navy: #0C1926;
+      --navy-light: #132438;
+      --charcoal: #1A2332;
+      --slate: #2A3A4E;
+      --gray-100: #F4F6F8;
+      --gray-200: #E2E8F0;
+      --gray-300: #CBD5E1;
+      --gray-400: #94A3B8;
+      --gray-500: #64748B;
+      --gray-600: #475569;
+      --white: #FFFFFF;
+      --red-emergency: #E53E3E;
+      --font-display: 'Lexend', -apple-system, sans-serif;
+      --font-body: 'Fira Sans', -apple-system, sans-serif;
+    }
+
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      font-family: var(--font-body);
+      font-weight: 400;
+      color: var(--charcoal);
+      background: var(--white);
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* ============================================
+       UTILITY BAR
+    ============================================ */
+    .utility-bar {
+      background: var(--navy);
+      color: var(--gray-300);
+      font-size: 0.8125rem;
+      padding: 0.5rem 0;
+      letter-spacing: 0.02em;
+    }
+
+    .utility-bar .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .utility-bar a {
+      color: var(--gray-300);
+      transition: color 0.2s;
+    }
+
+    .utility-bar a:hover {
+      color: var(--blue);
+    }
+
+    .utility-links {
+      display: flex;
+      gap: 1.5rem;
+      align-items: center;
+    }
+
+    .utility-links svg {
+      width: 14px;
+      height: 14px;
+      margin-right: 4px;
+      vertical-align: -2px;
+    }
+
+    .emergency-phone {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-weight: 600;
+      color: var(--white);
+    }
+
+    .emergency-phone .pulse-dot {
+      width: 8px;
+      height: 8px;
+      background: var(--green);
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    /* ============================================
+       HEADER
+    ============================================ */
+    .header {
+      background: var(--white);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+      transition: box-shadow 0.3s;
+    }
+
+    .header.scrolled {
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+    }
+
+    .header .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 0.75rem;
+      padding-bottom: 0.75rem;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      flex-shrink: 0;
+    }
+
+    .logo img {
+      height: 64px;
+      width: auto;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 0.9375rem;
+      font-weight: 500;
+      color: var(--charcoal);
+      transition: color 0.2s;
+      position: relative;
+      padding: 0.25rem 0;
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--blue);
+      transition: width 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: var(--blue);
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .nav-links a.active {
+      color: var(--blue);
+    }
+
+    .nav-links a.active::after {
+      width: 100%;
+    }
+
+    .header-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--green);
+      color: var(--white);
+      padding: 0.75rem 1.5rem;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 0.9375rem;
+      transition: all 0.3s;
+      border: 2px solid var(--green);
+      white-space: nowrap;
+    }
+
+    .header-cta:hover {
+      background: var(--green-dark);
+      border-color: var(--green-dark);
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(62, 170, 53, 0.35);
+    }
+
+    .mobile-menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0.5rem;
+    }
+
+    .mobile-menu-btn span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--charcoal);
+      margin: 5px 0;
+      transition: all 0.3s;
+    }
+
+    /* ============================================
+       CONTAINER
+    ============================================ */
+    .container {
+      max-width: 1440px;
+      margin-left: 5rem;
+      margin-right: 5rem;
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+
+    /* ============================================
+       SHARED ELEMENTS
+    ============================================ */
+    .section-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.8125rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--blue);
+      margin-bottom: 1rem;
+    }
+
+    .section-label::before {
+      content: '';
+      width: 24px;
+      height: 2px;
+      background: var(--blue);
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--green);
+      color: var(--white);
+      padding: 1rem 2rem;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: all 0.3s;
+      border: 2px solid var(--green);
+    }
+
+    .btn-primary:hover {
+      background: var(--green-dark);
+      border-color: var(--green-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(62, 170, 53, 0.35);
+    }
+
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: transparent;
+      color: var(--white);
+      padding: 1rem 2rem;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 1rem;
+      border: 2px solid rgba(255, 255, 255, 0.3);
+      transition: all 0.3s;
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--white);
+      background: rgba(255, 255, 255, 0.08);
+      transform: translateY(-2px);
+    }
+
+    .btn-white {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--white);
+      color: var(--blue-deeper);
+      padding: 1rem 2rem;
+      border-radius: 6px;
+      font-weight: 700;
+      font-size: 1rem;
+      transition: all 0.3s;
+      border: 2px solid var(--white);
+    }
+
+    .btn-white:hover {
+      background: transparent;
+      color: var(--white);
+      transform: translateY(-2px);
+    }
+
+    .btn-outline-white {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: transparent;
+      color: var(--white);
+      padding: 1rem 2rem;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 1rem;
+      border: 2px solid rgba(255, 255, 255, 0.4);
+      transition: all 0.3s;
+    }
+
+    .btn-outline-white:hover {
+      border-color: var(--white);
+      background: rgba(255, 255, 255, 0.1);
+      transform: translateY(-2px);
+    }
+
+    .btn-outline-blue {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: transparent;
+      color: var(--blue);
+      padding: 1rem 2rem;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 1rem;
+      border: 2px solid var(--blue);
+      transition: all 0.3s;
+    }
+
+    .btn-outline-blue:hover {
+      background: var(--blue);
+      color: var(--white);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(41, 171, 226, 0.3);
+    }
+
+    /* ============================================
+       PAGE HERO (SERVICE)
+    ============================================ */
+    .page-hero {
+      position: relative;
+      padding: 8rem 0 6rem;
+      background: var(--navy);
+      overflow: hidden;
+    }
+
+    .page-hero-bg {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+    }
+
+    .page-hero-bg img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(0.3) saturate(0.7);
+    }
+
+    .page-hero-bg::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to right,
+        rgba(12, 25, 38, 0.95) 0%,
+        rgba(12, 25, 38, 0.85) 35%,
+        rgba(12, 25, 38, 0.5) 60%,
+        rgba(12, 25, 38, 0.3) 100%
+      );
+    }
+
+    .page-hero .container {
+      position: relative;
+      z-index: 2;
+    }
+
+    .page-hero .breadcrumb {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.875rem;
+      color: var(--gray-400);
+      margin-bottom: 1.5rem;
+    }
+
+    .page-hero .breadcrumb a {
+      color: var(--gray-400);
+      transition: color 0.2s;
+    }
+
+    .page-hero .breadcrumb a:hover {
+      color: var(--blue);
+    }
+
+    .page-hero .breadcrumb svg {
+      width: 14px;
+      height: 14px;
+      color: var(--gray-500);
+    }
+
+    .page-hero h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 800;
+      color: var(--white);
+      line-height: 1.12;
+      margin-bottom: 1.25rem;
+      max-width: 700px;
+    }
+
+    .page-hero h1 .highlight {
+      color: var(--blue);
+    }
+
+    .page-hero p {
+      font-size: 1.1875rem;
+      color: var(--gray-300);
+      line-height: 1.7;
+      margin-bottom: 2rem;
+      max-width: 600px;
+    }
+
+    .page-hero-actions {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .page-hero-badges {
+      display: flex;
+      gap: 1.5rem;
+      margin-top: 2.5rem;
+      flex-wrap: wrap;
+    }
+
+    .hero-badge-item {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 0.6rem 1rem;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 8px;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+
+    .hero-badge-item svg {
+      width: 18px;
+      height: 18px;
+      color: var(--green);
+      flex-shrink: 0;
+    }
+
+    .hero-badge-item span {
+      font-size: 0.8125rem;
+      font-weight: 600;
+      color: var(--white);
+    }
+
+    /* ============================================
+       SERVICE OVERVIEW (SPLIT)
+    ============================================ */
+    .service-overview {
+      padding: 6rem 0;
+      background: var(--white);
+    }
+
+    .overview-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    .overview-content h2 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 3.5vw, 2.75rem);
+      font-weight: 700;
+      color: var(--navy);
+      line-height: 1.2;
+      margin-bottom: 1.25rem;
+    }
+
+    .overview-content > p {
+      font-size: 1.0625rem;
+      color: var(--gray-500);
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+    }
+
+    .overview-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      margin-bottom: 2rem;
+    }
+
+    .overview-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      font-size: 1rem;
+      color: var(--gray-600);
+      line-height: 1.6;
+    }
+
+    .overview-list li svg {
+      width: 20px;
+      height: 20px;
+      color: var(--green);
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .overview-images {
+      position: relative;
+    }
+
+    .overview-images .img-main {
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 24px 48px rgba(0, 0, 0, 0.12);
+    }
+
+    .overview-images .img-main img {
+      width: 100%;
+      height: 420px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .overview-images .stat-badge {
+      position: absolute;
+      bottom: -20px;
+      right: -16px;
+      background: var(--green);
+      color: var(--white);
+      padding: 1.25rem;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 8px 24px rgba(62, 170, 53, 0.4);
+    }
+
+    .stat-badge .number {
+      font-family: var(--font-display);
+      font-size: 2.25rem;
+      font-weight: 800;
+      line-height: 1;
+    }
+
+    .stat-badge .text {
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-top: 0.25rem;
+    }
+
+    /* ============================================
+       PROCESS SECTION
+    ============================================ */
+    .process {
+      padding: 6rem 0;
+      background: var(--gray-100);
+      position: relative;
+    }
+
+    .process .section-header {
+      text-align: center;
+      max-width: 640px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 3.5rem;
+    }
+
+    .process .section-header h2 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 3.5vw, 2.75rem);
+      font-weight: 700;
+      color: var(--navy);
+      line-height: 1.2;
+      margin-bottom: 1rem;
+    }
+
+    .process .section-header p {
+      font-size: 1.0625rem;
+      color: var(--gray-500);
+      line-height: 1.7;
+    }
+
+    .process-steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+      position: relative;
+    }
+
+    .process-steps::before {
+      content: '';
+      position: absolute;
+      top: 40px;
+      left: 12.5%;
+      right: 12.5%;
+      height: 2px;
+      background: linear-gradient(90deg, var(--blue), var(--gray-300), var(--blue));
+      z-index: 0;
+    }
+
+    .process-step {
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .step-number {
+      width: 80px;
+      height: 80px;
+      background: var(--white);
+      border: 3px solid var(--green);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.5rem;
+      transition: all 0.3s;
+    }
+
+    .step-number span {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: var(--green);
+    }
+
+    .process-step:hover .step-number {
+      background: var(--green);
+      box-shadow: 0 8px 24px rgba(62, 170, 53, 0.3);
+    }
+
+    .process-step:hover .step-number span {
+      color: var(--white);
+    }
+
+    .process-step h3 {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 0.75rem;
+    }
+
+    .process-step p {
+      font-size: 0.9rem;
+      color: var(--gray-500);
+      line-height: 1.6;
+      max-width: 240px;
+      margin: 0 auto;
+    }
+
+    /* ============================================
+       WHAT WE HANDLE
+    ============================================ */
+    .what-we-handle {
+      padding: 6rem 0;
+      background: var(--navy);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .what-we-handle::before {
+      content: '';
+      position: absolute;
+      top: -200px;
+      right: -200px;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(46, 163, 242, 0.08), transparent 70%);
+      pointer-events: none;
+    }
+
+    .what-we-handle .section-header {
+      text-align: center;
+      max-width: 640px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 3.5rem;
+    }
+
+    .what-we-handle .section-header h2 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 3.5vw, 2.75rem);
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.2;
+      margin-bottom: 1rem;
+    }
+
+    .what-we-handle .section-header p {
+      font-size: 1.0625rem;
+      color: var(--gray-400);
+      line-height: 1.7;
+    }
+
+    .handle-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.75rem;
+    }
+
+    .handle-card {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 12px;
+      padding: 2rem;
+      transition: all 0.3s;
+    }
+
+    .handle-card:hover {
+      background: rgba(255, 255, 255, 0.08);
+      border-color: rgba(41, 171, 226, 0.2);
+      transform: translateY(-4px);
+    }
+
+    .handle-card-icon {
+      width: 52px;
+      height: 52px;
+      background: rgba(62, 170, 53, 0.15);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.25rem;
+    }
+
+    .handle-card-icon svg {
+      width: 24px;
+      height: 24px;
+      color: var(--green);
+    }
+
+    .handle-card h3 {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 0.75rem;
+    }
+
+    .handle-card p {
+      font-size: 0.9375rem;
+      color: var(--gray-400);
+      line-height: 1.65;
+    }
+
+    /* ============================================
+       FAQ SECTION
+    ============================================ */
+    .faq-section {
+      padding: 6rem 0;
+      background: var(--gray-100);
+    }
+
+    .faq-section .section-header {
+      text-align: center;
+      max-width: 640px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 3.5rem;
+    }
+
+    .faq-section .section-header h2 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 3.5vw, 2.75rem);
+      font-weight: 700;
+      color: var(--navy);
+      line-height: 1.2;
+      margin-bottom: 1rem;
+    }
+
+    .faq-section .section-header p {
+      font-size: 1.0625rem;
+      color: var(--gray-500);
+      line-height: 1.7;
+    }
+
+    .faq-list {
+      max-width: 800px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .faq-item {
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: all 0.3s;
+    }
+
+    .faq-item:hover {
+      border-color: var(--blue);
+      box-shadow: 0 4px 16px rgba(41, 171, 226, 0.08);
+    }
+
+    .faq-question {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 1.5rem 2rem;
+      cursor: pointer;
+      background: none;
+      border: none;
+      width: 100%;
+      text-align: left;
+      font-family: var(--font-display);
+      font-size: 1.0625rem;
+      font-weight: 600;
+      color: var(--navy);
+      transition: color 0.2s;
+    }
+
+    .faq-question:hover {
+      color: var(--blue);
+    }
+
+    .faq-question svg {
+      width: 20px;
+      height: 20px;
+      color: var(--blue);
+      flex-shrink: 0;
+      transition: transform 0.3s;
+    }
+
+    .faq-item.active .faq-question svg {
+      transform: rotate(180deg);
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease, padding 0.3s ease;
+    }
+
+    .faq-item.active .faq-answer {
+      max-height: 300px;
+    }
+
+    .faq-answer-inner {
+      padding: 0 2rem 1.5rem;
+      font-size: 0.9375rem;
+      color: var(--gray-600);
+      line-height: 1.7;
+    }
+
+    /* ============================================
+       CTA BAND
+    ============================================ */
+    .cta-band {
+      padding: 5rem 0;
+      background: linear-gradient(135deg, var(--blue-deeper) 0%, var(--blue) 50%, var(--blue-dark) 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-band::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -20%;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(255, 255, 255, 0.08), transparent 70%);
+      pointer-events: none;
+    }
+
+    .cta-band .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+      z-index: 1;
+    }
+
+    .cta-band-content h2 {
+      font-family: var(--font-display);
+      font-size: clamp(1.75rem, 3vw, 2.5rem);
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 0.75rem;
+    }
+
+    .cta-band-content p {
+      font-size: 1.0625rem;
+      color: rgba(255, 255, 255, 0.8);
+      max-width: 480px;
+    }
+
+    .cta-band-actions {
+      display: flex;
+      gap: 1rem;
+      flex-shrink: 0;
+    }
+
+    /* ============================================
+       FOOTER
+    ============================================ */
+    .footer {
+      background: var(--navy);
+      color: var(--gray-400);
+      padding: 4rem 0 0;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1.25fr;
+      gap: 3rem;
+      padding-bottom: 3rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .footer-brand img {
+      height: 44px;
+      margin-bottom: 1.25rem;
+    }
+
+    .footer-brand p {
+      font-size: 0.9rem;
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+      color: var(--gray-400);
+    }
+
+    .footer-social {
+      display: flex;
+      gap: 0.75rem;
+    }
+
+    .footer-social a {
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.06);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s;
+    }
+
+    .footer-social a:hover {
+      background: var(--blue);
+      transform: translateY(-2px);
+    }
+
+    .footer-social svg {
+      width: 16px;
+      height: 16px;
+      color: var(--gray-400);
+      opacity: 0.5;
+      display: block;
+    }
+
+    .footer-social .social-icon-img {
+      width: 16px;
+      height: 16px;
+      display: block;
+      opacity: 0.35;
+      object-fit: contain;
+    }
+
+    .footer-social a:hover svg {
+      color: var(--white);
+      opacity: 1;
+    }
+
+    .footer-social a:hover .social-icon-img {
+      opacity: 0.85;
+    }
+
+    .footer-col h4 {
+      font-size: 0.875rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--white);
+      margin-bottom: 1.25rem;
+    }
+
+    .footer-col ul {
+      list-style: none;
+    }
+
+    .footer-col li {
+      margin-bottom: 0.6rem;
+    }
+
+    .footer-col a {
+      font-size: 0.9rem;
+      color: var(--gray-400);
+      transition: color 0.2s;
+    }
+
+    .footer-col a:hover {
+      color: var(--blue);
+    }
+
+    .footer-contact-item {
+      display: flex;
+      gap: 0.75rem;
+      align-items: flex-start;
+      margin-bottom: 1rem;
+    }
+
+    .footer-contact-item svg {
+      width: 18px;
+      height: 18px;
+      color: var(--blue);
+      margin-top: 2px;
+      flex-shrink: 0;
+    }
+
+    .footer-contact-item a,
+    .footer-contact-item p {
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+
+    .footer-bottom {
+      padding: 1.5rem 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.8125rem;
+      color: var(--gray-500);
+    }
+
+    .footer-bottom a {
+      color: var(--gray-500);
+      transition: color 0.2s;
+    }
+
+    .footer-bottom a:hover {
+      color: var(--blue);
+    }
+
+    .footer-legal-links {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    /* ============================================
+       RESPONSIVE
+    ============================================ */
+    @media (max-width: 1024px) {
+      .nav-links { display: none; }
+      .mobile-menu-btn { display: block; }
+      .overview-grid { grid-template-columns: 1fr; gap: 3rem; }
+      .overview-images { order: -1; }
+      .process-steps { grid-template-columns: 1fr 1fr; gap: 2.5rem; }
+      .process-steps::before { display: none; }
+      .handle-grid { grid-template-columns: 1fr 1fr; }
+      .cta-band .container { flex-direction: column; text-align: center; gap: 2rem; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 768px) {
+      .utility-bar .container { flex-direction: column; gap: 0.5rem; text-align: center; }
+      .utility-links { display: none; }
+      .page-hero { padding: 6rem 0 4rem; }
+      .page-hero h1 { font-size: 2.25rem; }
+      .handle-grid { grid-template-columns: 1fr; }
+      .process-steps { grid-template-columns: 1fr; max-width: 320px; margin-left: auto; margin-right: auto; }
+      .cta-band-actions { flex-direction: column; width: 100%; }
+      .cta-band-actions a { justify-content: center; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .footer-bottom { flex-direction: column; gap: 0.75rem; text-align: center; }
+      .faq-question { padding: 1.25rem 1.5rem; font-size: 1rem; }
+      .faq-answer-inner { padding: 0 1.5rem 1.25rem; }
+    }
+
+    @media (max-width: 480px) {
+      .page-hero-actions { flex-direction: column; }
+      .page-hero-actions a { justify-content: center; }
+      .page-hero-badges { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- UTILITY BAR -->
+  <div class="utility-bar">
+    <div class="container">
+      <div class="utility-links">
+        <a href="/careers/">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          Careers
+        </a>
+        <a href="/about-us/">About Us</a>
+        <a href="/mold-remediation-gallery/">Gallery</a>
+        <a href="/submit-a-review/">Reviews</a>
+      </div>
+      <a href="tel:2409706533" class="emergency-phone">
+        <span class="pulse-dot"></span>
+        24/7 Emergency Line: (240) 970-6533
+      </a>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <header class="header" id="header">
+    <div class="container">
+      <a href="/" class="logo">
+        <img src="../moldgone_logo.png" alt="MoldGone">
+      </a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="/services/">Services</a></li>
+          <li><a href="/remediation/" class="active">Remediation</a></li>
+          <li><a href="/reconstruction/">Reconstruction</a></li>
+          <li><a href="/air-quality/">Air Quality</a></li>
+          <li><a href="/know-you-have-mold/">Got Mold?</a></li>
+          <li><a href="/contact-us/">Contact</a></li>
+        </ul>
+      </nav>
+      <a href="/contact-us/" class="header-cta">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        Get Free Estimate
+      </a>
+      <button class="mobile-menu-btn" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="page-hero-bg">
+      <img src="../AdobeStock_340728315.jpeg" alt="Technician spraying antimicrobial treatment on mold-affected wall">
+    </div>
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="/">Home</a>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+        <a href="/services/">Services</a>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+        <span>Mold Remediation</span>
+      </div>
+      <h1>Professional <span class="highlight">Mold Remediation</span> You Can Trust</h1>
+      <p>IICRC-certified technicians using advanced containment, HEPA filtration, and antimicrobial protocols to completely eliminate mold from your property. Serving D.C., Baltimore, Maryland, and Virginia.</p>
+      <div class="page-hero-actions">
+        <a href="/contact-us/" class="btn-primary">
+          Schedule Free Inspection
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+        <a href="tel:2409706533" class="btn-secondary">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          (240) 970-6533
+        </a>
+      </div>
+      <div class="page-hero-badges">
+        <div class="hero-badge-item">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <span>IICRC S520 Protocols</span>
+        </div>
+        <div class="hero-badge-item">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg>
+          <span>EPA Compliant</span>
+        </div>
+        <div class="hero-badge-item">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          <span>24/7 Emergency Response</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICE OVERVIEW -->
+  <section class="service-overview">
+    <div class="container">
+      <div class="overview-grid">
+        <div class="overview-content">
+          <div class="section-label">Our Approach</div>
+          <h2>Thorough Remediation That Solves the Problem Permanently</h2>
+          <p>Mold doesn't just damage your property -- it threatens your health. Our remediation process goes beyond surface cleaning to address the root cause of mold growth, ensuring it doesn't return.</p>
+          <p>Every project follows IICRC S520 standards and EPA guidelines. We use industrial-grade equipment, third-party clearance testing, and comprehensive documentation to deliver results you can verify.</p>
+          <ul class="overview-list">
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg>
+              Full containment with negative air pressure to prevent cross-contamination
+            </li>
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg>
+              HEPA air scrubbers running continuously throughout the process
+            </li>
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg>
+              Antimicrobial treatment of all affected surfaces and cavities
+            </li>
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg>
+              Independent post-remediation verification (PRV) testing
+            </li>
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg>
+              Moisture source identification and remediation to prevent recurrence
+            </li>
+          </ul>
+          <a href="/contact-us/" class="btn-primary">
+            Get a Free Assessment
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
+        </div>
+        <div class="overview-images">
+          <div class="img-main">
+            <img src="../AdobeStock_578309503.jpeg" alt="MoldGone remediation team at work in protective equipment">
+          </div>
+          <div class="stat-badge">
+            <div class="number">5K+</div>
+            <div class="text">Projects<br>Completed</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REMEDIATION PROCESS -->
+  <section class="process">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label" style="justify-content: center;">Our Remediation Process</div>
+        <h2>From Assessment to Clearance</h2>
+        <p>Our proven remediation process follows IICRC S520 standards at every step, ensuring thorough decontamination and verified results.</p>
+      </div>
+      <div class="process-steps">
+        <div class="process-step">
+          <div class="step-number"><span>01</span></div>
+          <h3>Assessment &amp; Scope</h3>
+          <p>Detailed inspection to identify mold species, extent of contamination, moisture sources, and develop a remediation plan.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-number"><span>02</span></div>
+          <h3>Containment Setup</h3>
+          <p>Polyethylene barriers, negative air machines, and HEPA scrubbers isolate the work area to prevent spore migration.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-number"><span>03</span></div>
+          <h3>Removal &amp; Treatment</h3>
+          <p>Contaminated materials are safely removed. All surfaces are HEPA vacuumed, treated with antimicrobials, and decontaminated.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-number"><span>04</span></div>
+          <h3>Clearance Testing</h3>
+          <p>Independent third-party air quality testing confirms mold levels are at or below normal. We don't stop until you pass.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT WE HANDLE -->
+  <section class="what-we-handle">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label" style="justify-content: center; color: var(--blue);">Types of Mold We Handle</div>
+        <h2>Expert Removal for Every Mold Situation</h2>
+        <p>From common household mold to toxic species, our certified team has the training and equipment to handle any mold challenge safely and effectively.</p>
+      </div>
+      <div class="handle-grid">
+        <div class="handle-card">
+          <div class="handle-card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+          </div>
+          <h3>Black Mold (Stachybotrys)</h3>
+          <p>The most concerning species, often found after prolonged water damage. Requires specialized containment and removal protocols due to toxic mycotoxins.</p>
+        </div>
+        <div class="handle-card">
+          <div class="handle-card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.77 4 4 0 0 1 0 6.76 4 4 0 0 1-4.78 4.77 4 4 0 0 1-6.74 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76z"/><path d="m9 12 2 2 4-4"/></svg>
+          </div>
+          <h3>Aspergillus &amp; Penicillium</h3>
+          <p>Common indoor molds that trigger allergies and respiratory issues. Found on walls, insulation, HVAC systems, and water-damaged materials throughout the home.</p>
+        </div>
+        <div class="handle-card">
+          <div class="handle-card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="m9 12 2 2 4-4"/></svg>
+          </div>
+          <h3>Cladosporium</h3>
+          <p>Commonly found on fabrics, wood surfaces, and HVAC ducts. While less dangerous, large colonies still require professional remediation for complete removal.</p>
+        </div>
+        <div class="handle-card">
+          <div class="handle-card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h10"/><path d="M9 4v16"/><path d="m3 9 3 3-3 3"/><circle cx="17" cy="12" r="5"/></svg>
+          </div>
+          <h3>Crawlspace &amp; Basement Mold</h3>
+          <p>High-humidity environments beneath your home are breeding grounds. We address the mold, seal moisture entry points, and recommend vapor barriers.</p>
+        </div>
+        <div class="handle-card">
+          <div class="handle-card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18"/><path d="M8 6l4-3 4 3"/><path d="M4 12h16"/><path d="M6 18h12"/></svg>
+          </div>
+          <h3>Attic &amp; Roof Mold</h3>
+          <p>Poor ventilation and roof leaks cause attic mold infestations. We remediate the mold and address the underlying ventilation or moisture issues.</p>
+        </div>
+        <div class="handle-card">
+          <div class="handle-card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20h20"/><path d="M5 20V8.2a1 1 0 0 1 .4-.8l6-4.5a1 1 0 0 1 1.2 0l6 4.5a1 1 0 0 1 .4.8V20"/><path d="M9 20v-6h6v6"/></svg>
+          </div>
+          <h3>Commercial Properties</h3>
+          <p>Office buildings, retail spaces, and multifamily units require discreet, efficient remediation. We work around your schedule to minimize business disruption.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ SECTION -->
+  <section class="faq-section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label" style="justify-content: center;">Frequently Asked Questions</div>
+        <h2>Mold Remediation FAQs</h2>
+        <p>Answers to the most common questions we hear from homeowners and property managers about the remediation process.</p>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            How long does mold remediation take?
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Most residential projects take 3-5 business days from containment setup through clearance testing. The exact timeline depends on the size of the affected area, the type of materials involved, and the severity of contamination. We provide a detailed project timeline during the initial assessment so you know exactly what to expect.
+            </div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Do I need to leave my home during remediation?
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              In most cases, you can stay in your home as long as the affected area is properly contained and isolated. Our containment barriers and negative air pressure systems prevent mold spores from migrating to other areas. However, for extensive contamination or if family members have severe mold sensitivities, we may recommend temporary relocation for the duration of the project.
+            </div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Does homeowner's insurance cover mold remediation?
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Many homeowner's insurance policies cover mold remediation when it results from a covered peril, such as a burst pipe or storm damage. Policies vary widely, so we recommend contacting your insurer early. MoldGone works directly with insurance companies, handling documentation, photo evidence, and claims paperwork to maximize your coverage and minimize out-of-pocket costs.
+            </div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            What is the difference between mold removal and mold remediation?
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              "Mold removal" implies eliminating all mold, which is impossible -- mold spores exist naturally in every environment. "Mold remediation" is the industry-standard term for returning mold levels to normal, safe concentrations. This involves removing contaminated materials, treating affected surfaces, improving air quality, and addressing the moisture source that caused the growth in the first place.
+            </div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            How do I know if the remediation was successful?
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              We arrange independent third-party post-remediation verification (PRV) testing. A separate certified inspector collects air and surface samples after our work is complete. These samples are analyzed by an accredited laboratory. The project isn't considered complete until lab results confirm mold spore levels are at or below normal outdoor baseline levels.
+            </div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Can I do mold remediation myself?
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              The EPA recommends professional remediation for any mold area larger than 10 square feet. DIY cleanup without proper containment can spread spores throughout your home, making the problem significantly worse. Without industrial HEPA equipment and proper protocols, you risk cross-contaminating clean areas and exposing yourself to concentrated mold spores. Professional remediation ensures the job is done safely and completely.
+            </div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            How much does mold remediation cost?
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Cost varies based on the size of the affected area, the type and severity of mold, accessibility, and whether reconstruction is needed afterward. We provide free, detailed estimates after an on-site assessment -- no hidden fees, no surprises. Our pricing is transparent and competitive, and we work with your insurance carrier to minimize your out-of-pocket expense.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BAND -->
+  <section class="cta-band">
+    <div class="container">
+      <div class="cta-band-content">
+        <h2>Mold Won't Wait. Neither Should You.</h2>
+        <p>Every hour mold goes untreated, it spreads further. Get a certified team on-site fast with a free inspection and detailed scope of work.</p>
+      </div>
+      <div class="cta-band-actions">
+        <a href="/contact-us/" class="btn-white">
+          Schedule Free Inspection
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+        <a href="tel:2409706533" class="btn-outline-white">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Call (240) 970-6533
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="../moldgone_logo.png" alt="MoldGone">
+          <p>Trusted mold remediation experts serving the D.C. and Baltimore metro areas. Licensed, insured, and IICRC certified. Serving residential and commercial properties across Maryland and Virginia since 2006.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Facebook">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="#" aria-label="Google">
+              <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+            </a>
+            <a href="https://www.yelp.com/biz/moldgone-silver-spring" aria-label="Yelp" target="_blank" rel="noopener">
+              <img class="social-icon-img" src="https://s3-media0.fl.yelpcdn.com/assets/public/burst_white.yji-69d3bd788c1013a1c15e.svg" alt="Yelp">
+            </a>
+            <a href="https://www.angi.com/companylist/us/md/silver-spring/moldgone-net-reviews-9498270.htm" aria-label="Angi" target="_blank" rel="noopener">
+              <img class="social-icon-img" src="https://media.angi.com/s3fs-public/Angi-logo-Orange.svg" alt="Angi" style="filter: brightness(0) invert(1);">
+            </a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="/remediation/">Mold Remediation</a></li>
+            <li><a href="/air-quality/">Air Quality Testing</a></li>
+            <li><a href="/reconstruction/">Reconstruction</a></li>
+            <li><a href="/know-you-have-mold/">Mold Assessment</a></li>
+            <li><a href="/services/">All Services</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="/about-us/">About Us</a></li>
+            <li><a href="/mold-remediation-gallery/">Project Gallery</a></li>
+            <li><a href="/submit-a-review/">Reviews</a></li>
+            <li><a href="/careers/">Careers</a></li>
+            <li><a href="/contact-us/">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <div class="footer-contact-item">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <a href="tel:2409706533">(240) 970-6533</a>
+          </div>
+          <div class="footer-contact-item">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            <a href="mailto:info@moldgone.net">info@moldgone.net</a>
+          </div>
+          <div class="footer-contact-item">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+            <p>Serving D.C., Baltimore<br>MD &amp; VA</p>
+          </div>
+          <div class="footer-contact-item">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <p>24/7 Emergency<br>Response Available</p>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 MoldGone.net. All rights reserved.</p>
+        <div class="footer-legal-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="/site-map/">Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Sticky header shadow
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      header.classList.toggle('scrolled', window.scrollY > 10);
+    });
+
+    // FAQ accordion
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.closest('.faq-item');
+        const isActive = item.classList.contains('active');
+        // Close all
+        document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+        document.querySelectorAll('.faq-question').forEach(b => b.setAttribute('aria-expanded', 'false'));
+        // Open clicked (if it wasn't already open)
+        if (!isActive) {
+          item.classList.add('active');
+          btn.setAttribute('aria-expanded', 'true');
+        }
+      });
+    });
+  </script>
+</body>
+</html>

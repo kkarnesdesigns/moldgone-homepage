@@ -1,0 +1,1629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reconstruction Services | MoldGone - D.C., Baltimore & MD/VA</title>
+  <meta name="description" content="Full reconstruction and restoration after mold damage. Drywall, flooring, painting, cabinetry & structural repairs. Licensed contractors serving D.C., Baltimore, Maryland & Virginia.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800&family=Fira+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --blue: #29ABE2;
+      --blue-dark: #1E94C8;
+      --blue-deeper: #1578A5;
+      --green: #3EAA35;
+      --green-dark: #338D2B;
+      --green-deeper: #287322;
+      --navy: #0C1926;
+      --navy-light: #132438;
+      --charcoal: #1A2332;
+      --slate: #2A3A4E;
+      --gray-100: #F4F6F8;
+      --gray-200: #E2E8F0;
+      --gray-300: #CBD5E1;
+      --gray-400: #94A3B8;
+      --gray-500: #64748B;
+      --gray-600: #475569;
+      --white: #FFFFFF;
+      --red-emergency: #E53E3E;
+      --font-display: 'Lexend', -apple-system, sans-serif;
+      --font-body: 'Fira Sans', -apple-system, sans-serif;
+    }
+
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      font-family: var(--font-body);
+      font-weight: 400;
+      color: var(--charcoal);
+      background: var(--white);
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* ============================================
+       UTILITY BAR
+    ============================================ */
+    .utility-bar {
+      background: var(--navy);
+      color: var(--gray-300);
+      font-size: 0.8125rem;
+      padding: 0.5rem 0;
+      letter-spacing: 0.02em;
+    }
+
+    .utility-bar .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .utility-bar a {
+      color: var(--gray-300);
+      transition: color 0.2s;
+    }
+
+    .utility-bar a:hover {
+      color: var(--blue);
+    }
+
+    .utility-links {
+      display: flex;
+      gap: 1.5rem;
+      align-items: center;
+    }
+
+    .utility-links svg {
+      width: 14px;
+      height: 14px;
+      margin-right: 4px;
+      vertical-align: -2px;
+    }
+
+    .emergency-phone {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-weight: 600;
+      color: var(--white);
+    }
+
+    .emergency-phone .pulse-dot {
+      width: 8px;
+      height: 8px;
+      background: var(--green);
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    /* ============================================
+       HEADER
+    ============================================ */
+    .header {
+      background: var(--white);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+      transition: box-shadow 0.3s;
+    }
+
+    .header.scrolled {
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+    }
+
+    .header .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 0.75rem;
+      padding-bottom: 0.75rem;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      flex-shrink: 0;
+    }
+
+    .logo img {
+      height: 64px;
+      width: auto;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 0.9375rem;
+      font-weight: 500;
+      color: var(--charcoal);
+      transition: color 0.2s;
+      position: relative;
+      padding: 0.25rem 0;
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--blue);
+      transition: width 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: var(--blue);
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .nav-links a.active {
+      color: var(--blue);
+    }
+
+    .nav-links a.active::after {
+      width: 100%;
+    }
+
+    .header-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--green);
+      color: var(--white);
+      padding: 0.75rem 1.5rem;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 0.9375rem;
+      transition: all 0.3s;
+      border: 2px solid var(--green);
+      white-space: nowrap;
+    }
+
+    .header-cta:hover {
+      background: var(--green-dark);
+      border-color: var(--green-dark);
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(62, 170, 53, 0.35);
+    }
+
+    .mobile-menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0.5rem;
+    }
+
+    .mobile-menu-btn span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--charcoal);
+      margin: 5px 0;
+      transition: all 0.3s;
+    }
+
+    /* ============================================
+       CONTAINER
+    ============================================ */
+    .container {
+      max-width: 1440px;
+      margin-left: 5rem;
+      margin-right: 5rem;
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+
+    /* ============================================
+       SHARED ELEMENTS
+    ============================================ */
+    .section-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.8125rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--blue);
+      margin-bottom: 1rem;
+    }
+
+    .section-label::before {
+      content: '';
+      width: 24px;
+      height: 2px;
+      background: var(--blue);
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--green);
+      color: var(--white);
+      padding: 1rem 2rem;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: all 0.3s;
+      border: 2px solid var(--green);
+    }
+
+    .btn-primary:hover {
+      background: var(--green-dark);
+      border-color: var(--green-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(62, 170, 53, 0.35);
+    }
+
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: transparent;
+      color: var(--white);
+      padding: 1rem 2rem;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 1rem;
+      border: 2px solid rgba(255, 255, 255, 0.3);
+      transition: all 0.3s;
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--white);
+      background: rgba(255, 255, 255, 0.08);
+      transform: translateY(-2px);
+    }
+
+    .btn-white {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--white);
+      color: var(--blue-deeper);
+      padding: 1rem 2rem;
+      border-radius: 6px;
+      font-weight: 700;
+      font-size: 1rem;
+      transition: all 0.3s;
+      border: 2px solid var(--white);
+    }
+
+    .btn-white:hover {
+      background: transparent;
+      color: var(--white);
+      transform: translateY(-2px);
+    }
+
+    .btn-outline-white {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: transparent;
+      color: var(--white);
+      padding: 1rem 2rem;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 1rem;
+      border: 2px solid rgba(255, 255, 255, 0.4);
+      transition: all 0.3s;
+    }
+
+    .btn-outline-white:hover {
+      border-color: var(--white);
+      background: rgba(255, 255, 255, 0.1);
+      transform: translateY(-2px);
+    }
+
+    /* ============================================
+       PAGE HERO (SERVICE)
+    ============================================ */
+    .page-hero {
+      position: relative;
+      padding: 8rem 0 6rem;
+      background: var(--navy);
+      overflow: hidden;
+    }
+
+    .page-hero-bg {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+    }
+
+    .page-hero-bg img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(0.3) saturate(0.7);
+    }
+
+    .page-hero-bg::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to right,
+        rgba(12, 25, 38, 0.95) 0%,
+        rgba(12, 25, 38, 0.85) 35%,
+        rgba(12, 25, 38, 0.5) 60%,
+        rgba(12, 25, 38, 0.3) 100%
+      );
+    }
+
+    .page-hero .container {
+      position: relative;
+      z-index: 2;
+    }
+
+    .page-hero .breadcrumb {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.875rem;
+      color: var(--gray-400);
+      margin-bottom: 1.5rem;
+    }
+
+    .page-hero .breadcrumb a {
+      color: var(--gray-400);
+      transition: color 0.2s;
+    }
+
+    .page-hero .breadcrumb a:hover {
+      color: var(--blue);
+    }
+
+    .page-hero .breadcrumb svg {
+      width: 14px;
+      height: 14px;
+      color: var(--gray-500);
+    }
+
+    .page-hero h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 800;
+      color: var(--white);
+      line-height: 1.12;
+      margin-bottom: 1.25rem;
+      max-width: 700px;
+    }
+
+    .page-hero h1 .highlight {
+      color: var(--blue);
+    }
+
+    .page-hero p {
+      font-size: 1.1875rem;
+      color: var(--gray-300);
+      line-height: 1.7;
+      margin-bottom: 2rem;
+      max-width: 600px;
+    }
+
+    .page-hero-actions {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .page-hero-badges {
+      display: flex;
+      gap: 1.5rem;
+      margin-top: 2.5rem;
+      flex-wrap: wrap;
+    }
+
+    .hero-badge-item {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 0.6rem 1rem;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 8px;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+
+    .hero-badge-item svg {
+      width: 18px;
+      height: 18px;
+      color: var(--green);
+      flex-shrink: 0;
+    }
+
+    .hero-badge-item span {
+      font-size: 0.8125rem;
+      font-weight: 600;
+      color: var(--white);
+    }
+
+    /* ============================================
+       SERVICE OVERVIEW (SPLIT)
+    ============================================ */
+    .service-overview {
+      padding: 6rem 0;
+      background: var(--white);
+    }
+
+    .overview-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    .overview-content h2 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 3.5vw, 2.75rem);
+      font-weight: 700;
+      color: var(--navy);
+      line-height: 1.2;
+      margin-bottom: 1.25rem;
+    }
+
+    .overview-content > p {
+      font-size: 1.0625rem;
+      color: var(--gray-500);
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+    }
+
+    .overview-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      margin-bottom: 2rem;
+    }
+
+    .overview-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      font-size: 1rem;
+      color: var(--gray-600);
+      line-height: 1.6;
+    }
+
+    .overview-list li svg {
+      width: 20px;
+      height: 20px;
+      color: var(--green);
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .overview-images {
+      position: relative;
+    }
+
+    .overview-images .img-main {
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 24px 48px rgba(0, 0, 0, 0.12);
+    }
+
+    .overview-images .img-main img {
+      width: 100%;
+      height: 420px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .overview-images .stat-badge {
+      position: absolute;
+      bottom: -20px;
+      right: -16px;
+      background: var(--green);
+      color: var(--white);
+      padding: 1.25rem;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 8px 24px rgba(62, 170, 53, 0.4);
+    }
+
+    .stat-badge .number {
+      font-family: var(--font-display);
+      font-size: 2.25rem;
+      font-weight: 800;
+      line-height: 1;
+    }
+
+    .stat-badge .text {
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-top: 0.25rem;
+    }
+
+    /* ============================================
+       SERVICES GRID
+    ============================================ */
+    .services-detail {
+      padding: 6rem 0;
+      background: var(--gray-100);
+    }
+
+    .services-detail .section-header {
+      text-align: center;
+      max-width: 640px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 3.5rem;
+    }
+
+    .services-detail .section-header h2 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 3.5vw, 2.75rem);
+      font-weight: 700;
+      color: var(--navy);
+      line-height: 1.2;
+      margin-bottom: 1rem;
+    }
+
+    .services-detail .section-header p {
+      font-size: 1.0625rem;
+      color: var(--gray-500);
+      line-height: 1.7;
+    }
+
+    .services-detail-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.75rem;
+    }
+
+    .detail-card {
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-radius: 12px;
+      padding: 2rem;
+      transition: all 0.3s;
+    }
+
+    .detail-card:hover {
+      box-shadow: 0 12px 32px rgba(12, 25, 38, 0.08);
+      transform: translateY(-4px);
+      border-color: transparent;
+    }
+
+    .detail-card-icon {
+      width: 52px;
+      height: 52px;
+      background: linear-gradient(135deg, var(--green), var(--green-deeper));
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.25rem;
+      box-shadow: 0 4px 12px rgba(62, 170, 53, 0.3);
+    }
+
+    .detail-card-icon svg {
+      width: 24px;
+      height: 24px;
+      color: var(--white);
+    }
+
+    .detail-card h3 {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 0.75rem;
+    }
+
+    .detail-card p {
+      font-size: 0.9375rem;
+      color: var(--gray-500);
+      line-height: 1.65;
+    }
+
+    /* ============================================
+       BEFORE/AFTER SECTION
+    ============================================ */
+    .before-after {
+      padding: 6rem 0;
+      background: var(--navy);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .before-after::before {
+      content: '';
+      position: absolute;
+      top: -200px;
+      right: -200px;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(46, 163, 242, 0.08), transparent 70%);
+      pointer-events: none;
+    }
+
+    .before-after .section-header {
+      text-align: center;
+      max-width: 640px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 3.5rem;
+    }
+
+    .before-after .section-header h2 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 3.5vw, 2.75rem);
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.2;
+      margin-bottom: 1rem;
+    }
+
+    .before-after .section-header p {
+      font-size: 1.0625rem;
+      color: var(--gray-400);
+      line-height: 1.7;
+    }
+
+    .ba-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+
+    .ba-card {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: all 0.3s;
+    }
+
+    .ba-card:hover {
+      border-color: rgba(41, 171, 226, 0.2);
+      transform: translateY(-4px);
+    }
+
+    .ba-card-image {
+      height: 200px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .ba-card-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    .ba-card:hover .ba-card-image img {
+      transform: scale(1.06);
+    }
+
+    .ba-card-body {
+      padding: 1.75rem;
+    }
+
+    .ba-card h3 {
+      font-family: var(--font-display);
+      font-size: 1.125rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 0.5rem;
+    }
+
+    .ba-card p {
+      font-size: 0.9rem;
+      color: var(--gray-400);
+      line-height: 1.6;
+    }
+
+    /* ============================================
+       PROCESS SECTION
+    ============================================ */
+    .process {
+      padding: 6rem 0;
+      background: var(--gray-100);
+      position: relative;
+    }
+
+    .process .section-header {
+      text-align: center;
+      max-width: 640px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 3.5rem;
+    }
+
+    .process .section-header h2 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 3.5vw, 2.75rem);
+      font-weight: 700;
+      color: var(--navy);
+      line-height: 1.2;
+      margin-bottom: 1rem;
+    }
+
+    .process .section-header p {
+      font-size: 1.0625rem;
+      color: var(--gray-500);
+      line-height: 1.7;
+    }
+
+    .process-steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+      position: relative;
+    }
+
+    .process-steps::before {
+      content: '';
+      position: absolute;
+      top: 40px;
+      left: 12.5%;
+      right: 12.5%;
+      height: 2px;
+      background: linear-gradient(90deg, var(--blue), var(--gray-300), var(--blue));
+      z-index: 0;
+    }
+
+    .process-step {
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .step-number {
+      width: 80px;
+      height: 80px;
+      background: var(--white);
+      border: 3px solid var(--green);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.5rem;
+      transition: all 0.3s;
+    }
+
+    .step-number span {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: var(--green);
+    }
+
+    .process-step:hover .step-number {
+      background: var(--green);
+      box-shadow: 0 8px 24px rgba(62, 170, 53, 0.3);
+    }
+
+    .process-step:hover .step-number span {
+      color: var(--white);
+    }
+
+    .process-step h3 {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 0.75rem;
+    }
+
+    .process-step p {
+      font-size: 0.9rem;
+      color: var(--gray-500);
+      line-height: 1.6;
+      max-width: 240px;
+      margin: 0 auto;
+    }
+
+    /* ============================================
+       FAQ SECTION
+    ============================================ */
+    .faq-section {
+      padding: 6rem 0;
+      background: var(--white);
+    }
+
+    .faq-section .section-header {
+      text-align: center;
+      max-width: 640px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 3.5rem;
+    }
+
+    .faq-section .section-header h2 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 3.5vw, 2.75rem);
+      font-weight: 700;
+      color: var(--navy);
+      line-height: 1.2;
+      margin-bottom: 1rem;
+    }
+
+    .faq-section .section-header p {
+      font-size: 1.0625rem;
+      color: var(--gray-500);
+      line-height: 1.7;
+    }
+
+    .faq-list {
+      max-width: 800px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .faq-item {
+      background: var(--gray-100);
+      border: 1px solid var(--gray-200);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: all 0.3s;
+    }
+
+    .faq-item:hover {
+      border-color: var(--blue);
+      box-shadow: 0 4px 16px rgba(41, 171, 226, 0.08);
+    }
+
+    .faq-question {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 1.5rem 2rem;
+      cursor: pointer;
+      background: none;
+      border: none;
+      width: 100%;
+      text-align: left;
+      font-family: var(--font-display);
+      font-size: 1.0625rem;
+      font-weight: 600;
+      color: var(--navy);
+      transition: color 0.2s;
+    }
+
+    .faq-question:hover {
+      color: var(--blue);
+    }
+
+    .faq-question svg {
+      width: 20px;
+      height: 20px;
+      color: var(--blue);
+      flex-shrink: 0;
+      transition: transform 0.3s;
+    }
+
+    .faq-item.active .faq-question svg {
+      transform: rotate(180deg);
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease, padding 0.3s ease;
+    }
+
+    .faq-item.active .faq-answer {
+      max-height: 300px;
+    }
+
+    .faq-answer-inner {
+      padding: 0 2rem 1.5rem;
+      font-size: 0.9375rem;
+      color: var(--gray-600);
+      line-height: 1.7;
+    }
+
+    /* ============================================
+       CTA BAND
+    ============================================ */
+    .cta-band {
+      padding: 5rem 0;
+      background: linear-gradient(135deg, var(--blue-deeper) 0%, var(--blue) 50%, var(--blue-dark) 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-band::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -20%;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(255, 255, 255, 0.08), transparent 70%);
+      pointer-events: none;
+    }
+
+    .cta-band .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+      z-index: 1;
+    }
+
+    .cta-band-content h2 {
+      font-family: var(--font-display);
+      font-size: clamp(1.75rem, 3vw, 2.5rem);
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 0.75rem;
+    }
+
+    .cta-band-content p {
+      font-size: 1.0625rem;
+      color: rgba(255, 255, 255, 0.8);
+      max-width: 480px;
+    }
+
+    .cta-band-actions {
+      display: flex;
+      gap: 1rem;
+      flex-shrink: 0;
+    }
+
+    /* ============================================
+       FOOTER
+    ============================================ */
+    .footer {
+      background: var(--navy);
+      color: var(--gray-400);
+      padding: 4rem 0 0;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1.25fr;
+      gap: 3rem;
+      padding-bottom: 3rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .footer-brand img {
+      height: 44px;
+      margin-bottom: 1.25rem;
+    }
+
+    .footer-brand p {
+      font-size: 0.9rem;
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+      color: var(--gray-400);
+    }
+
+    .footer-social {
+      display: flex;
+      gap: 0.75rem;
+    }
+
+    .footer-social a {
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.06);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s;
+    }
+
+    .footer-social a:hover {
+      background: var(--blue);
+      transform: translateY(-2px);
+    }
+
+    .footer-social svg {
+      width: 16px;
+      height: 16px;
+      color: var(--gray-400);
+      opacity: 0.5;
+      display: block;
+    }
+
+    .footer-social .social-icon-img {
+      width: 16px;
+      height: 16px;
+      display: block;
+      opacity: 0.35;
+      object-fit: contain;
+    }
+
+    .footer-social a:hover svg {
+      color: var(--white);
+      opacity: 1;
+    }
+
+    .footer-social a:hover .social-icon-img {
+      opacity: 0.85;
+    }
+
+    .footer-col h4 {
+      font-size: 0.875rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--white);
+      margin-bottom: 1.25rem;
+    }
+
+    .footer-col ul {
+      list-style: none;
+    }
+
+    .footer-col li {
+      margin-bottom: 0.6rem;
+    }
+
+    .footer-col a {
+      font-size: 0.9rem;
+      color: var(--gray-400);
+      transition: color 0.2s;
+    }
+
+    .footer-col a:hover {
+      color: var(--blue);
+    }
+
+    .footer-contact-item {
+      display: flex;
+      gap: 0.75rem;
+      align-items: flex-start;
+      margin-bottom: 1rem;
+    }
+
+    .footer-contact-item svg {
+      width: 18px;
+      height: 18px;
+      color: var(--blue);
+      margin-top: 2px;
+      flex-shrink: 0;
+    }
+
+    .footer-contact-item a,
+    .footer-contact-item p {
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+
+    .footer-bottom {
+      padding: 1.5rem 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.8125rem;
+      color: var(--gray-500);
+    }
+
+    .footer-bottom a {
+      color: var(--gray-500);
+      transition: color 0.2s;
+    }
+
+    .footer-bottom a:hover {
+      color: var(--blue);
+    }
+
+    .footer-legal-links {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    /* ============================================
+       RESPONSIVE
+    ============================================ */
+    @media (max-width: 1024px) {
+      .nav-links { display: none; }
+      .mobile-menu-btn { display: block; }
+      .overview-grid { grid-template-columns: 1fr; gap: 3rem; }
+      .overview-images { order: -1; }
+      .services-detail-grid { grid-template-columns: 1fr 1fr; }
+      .process-steps { grid-template-columns: 1fr 1fr; gap: 2.5rem; }
+      .process-steps::before { display: none; }
+      .ba-grid { grid-template-columns: 1fr 1fr; }
+      .cta-band .container { flex-direction: column; text-align: center; gap: 2rem; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 768px) {
+      .utility-bar .container { flex-direction: column; gap: 0.5rem; text-align: center; }
+      .utility-links { display: none; }
+      .page-hero { padding: 6rem 0 4rem; }
+      .page-hero h1 { font-size: 2.25rem; }
+      .services-detail-grid { grid-template-columns: 1fr; }
+      .ba-grid { grid-template-columns: 1fr; }
+      .process-steps { grid-template-columns: 1fr; max-width: 320px; margin-left: auto; margin-right: auto; }
+      .cta-band-actions { flex-direction: column; width: 100%; }
+      .cta-band-actions a { justify-content: center; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .footer-bottom { flex-direction: column; gap: 0.75rem; text-align: center; }
+      .faq-question { padding: 1.25rem 1.5rem; font-size: 1rem; }
+      .faq-answer-inner { padding: 0 1.5rem 1.25rem; }
+    }
+
+    @media (max-width: 480px) {
+      .page-hero-actions { flex-direction: column; }
+      .page-hero-actions a { justify-content: center; }
+      .page-hero-badges { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- UTILITY BAR -->
+  <div class="utility-bar">
+    <div class="container">
+      <div class="utility-links">
+        <a href="/careers/">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          Careers
+        </a>
+        <a href="/about-us/">About Us</a>
+        <a href="/mold-remediation-gallery/">Gallery</a>
+        <a href="/submit-a-review/">Reviews</a>
+      </div>
+      <a href="tel:2409706533" class="emergency-phone">
+        <span class="pulse-dot"></span>
+        24/7 Emergency Line: (240) 970-6533
+      </a>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <header class="header" id="header">
+    <div class="container">
+      <a href="/" class="logo">
+        <img src="../moldgone_logo.png" alt="MoldGone">
+      </a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="/services/">Services</a></li>
+          <li><a href="/remediation/">Remediation</a></li>
+          <li><a href="/reconstruction/" class="active">Reconstruction</a></li>
+          <li><a href="/air-quality/">Air Quality</a></li>
+          <li><a href="/know-you-have-mold/">Got Mold?</a></li>
+          <li><a href="/contact-us/">Contact</a></li>
+        </ul>
+      </nav>
+      <a href="/contact-us/" class="header-cta">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        Get Free Estimate
+      </a>
+      <button class="mobile-menu-btn" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="page-hero-bg">
+      <img src="../AdobeStock_190531909.jpeg" alt="Construction workers installing drywall during reconstruction">
+    </div>
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="/">Home</a>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+        <a href="/services/">Services</a>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+        <span>Reconstruction</span>
+      </div>
+      <h1>Complete <span class="highlight">Reconstruction</span> After Mold Damage</h1>
+      <p>Don't settle for halfway done. Our licensed contractors restore your property to pre-loss condition after mold remediation -- from drywall and flooring to painting and trim work.</p>
+      <div class="page-hero-actions">
+        <a href="/contact-us/" class="btn-primary">
+          Get a Free Estimate
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+        <a href="tel:2409706533" class="btn-secondary">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          (240) 970-6533
+        </a>
+      </div>
+      <div class="page-hero-badges">
+        <div class="hero-badge-item">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20h20"/><path d="M5 20V8.2a1 1 0 0 1 .4-.8l6-4.5a1 1 0 0 1 1.2 0l6 4.5a1 1 0 0 1 .4.8V20"/><path d="M9 20v-6h6v6"/></svg>
+          <span>Licensed Contractors</span>
+        </div>
+        <div class="hero-badge-item">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg>
+          <span>Pre-Loss Condition Guarantee</span>
+        </div>
+        <div class="hero-badge-item">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="5" rx="2"/><line x1="2" x2="22" y1="10" y2="10"/></svg>
+          <span>Insurance Coordination</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICE OVERVIEW -->
+  <section class="service-overview">
+    <div class="container">
+      <div class="overview-grid">
+        <div class="overview-content">
+          <div class="section-label">One Team, Start to Finish</div>
+          <h2>Seamless Restoration from Remediation to Rebuild</h2>
+          <p>Most mold remediation projects require removing drywall, flooring, insulation, or other building materials. That leaves your property in a state that needs professional reconstruction to look and function like it did before.</p>
+          <p>With MoldGone, you get one team handling both remediation and reconstruction. No juggling contractors, no scheduling gaps, no finger-pointing between companies. We manage the entire process so you don't have to.</p>
+          <ul class="overview-list">
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg>
+              Drywall installation, taping, and finishing to match existing textures
+            </li>
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg>
+              Flooring replacement -- hardwood, tile, carpet, and vinyl
+            </li>
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg>
+              Interior painting with color matching and professional finish
+            </li>
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg>
+              Trim, baseboard, and cabinetry replacement
+            </li>
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg>
+              Insulation and vapor barrier installation with mold-resistant materials
+            </li>
+          </ul>
+          <a href="/contact-us/" class="btn-primary">
+            Get a Free Estimate
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
+        </div>
+        <div class="overview-images">
+          <div class="img-main">
+            <img src="../AdobeStock_190531909.jpeg" alt="Professional construction crew working on interior reconstruction">
+          </div>
+          <div class="stat-badge">
+            <div class="number">100%</div>
+            <div class="text">Satisfaction<br>Guaranteed</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RECONSTRUCTION SERVICES -->
+  <section class="services-detail">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label" style="justify-content: center;">What We Rebuild</div>
+        <h2>Full-Scope Reconstruction Services</h2>
+        <p>Every element removed during remediation is restored to match or exceed the original quality. We handle everything so your space feels like home again.</p>
+      </div>
+      <div class="services-detail-grid">
+        <div class="detail-card">
+          <div class="detail-card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
+          </div>
+          <h3>Drywall &amp; Framing</h3>
+          <p>New drywall installation, taping, mudding, and texturing to seamlessly match your existing walls and ceilings. Structural framing repairs when needed.</p>
+        </div>
+        <div class="detail-card">
+          <div class="detail-card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3h18v18H3z"/><path d="M3 9h18"/><path d="M3 15h18"/><path d="M9 3v18"/><path d="M15 3v18"/></svg>
+          </div>
+          <h3>Flooring</h3>
+          <p>Hardwood, tile, luxury vinyl, carpet, and laminate installation. We source matching materials and ensure proper subfloor preparation for lasting results.</p>
+        </div>
+        <div class="detail-card">
+          <div class="detail-card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m2 22 10-10"/><path d="M16 8l-1.17 1.17"/><path d="M13.41 10.59a2 2 0 1 1-2.83-2.83"/><path d="M22 2L12 12"/></svg>
+          </div>
+          <h3>Painting &amp; Finishing</h3>
+          <p>Professional interior painting with computer-matched colors and textures. Priming, sealing, and multi-coat application for a flawless finish.</p>
+        </div>
+        <div class="detail-card">
+          <div class="detail-card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20h20"/><path d="M5 20V8.2a1 1 0 0 1 .4-.8l6-4.5a1 1 0 0 1 1.2 0l6 4.5a1 1 0 0 1 .4.8V20"/><path d="M9 20v-6h6v6"/></svg>
+          </div>
+          <h3>Trim &amp; Cabinetry</h3>
+          <p>Baseboards, crown molding, door casings, and custom cabinetry. We match existing profiles and finishes so new work blends with the original construction.</p>
+        </div>
+        <div class="detail-card">
+          <div class="detail-card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18"/><path d="M8 6l4-3 4 3"/><path d="M4 12h16"/><path d="M6 18h12"/></svg>
+          </div>
+          <h3>Insulation &amp; Vapor Barriers</h3>
+          <p>Mold-resistant insulation and vapor barrier systems that protect against future moisture intrusion. Properly insulated and sealed for energy efficiency.</p>
+        </div>
+        <div class="detail-card">
+          <div class="detail-card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4v10.54a4 4 0 1 1-4 0V4a2 2 0 0 1 4 0Z"/></svg>
+          </div>
+          <h3>Plumbing &amp; HVAC</h3>
+          <p>Repair or replacement of plumbing and HVAC components affected by mold or water damage. We fix the source to ensure the problem doesn't come back.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RECONSTRUCTION PROCESS -->
+  <section class="process">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label" style="justify-content: center;">Our Reconstruction Process</div>
+        <h2>From Clearance to Completion</h2>
+        <p>Once remediation passes clearance testing, our reconstruction crew steps in to restore your property. Here's how it works.</p>
+      </div>
+      <div class="process-steps">
+        <div class="process-step">
+          <div class="step-number"><span>01</span></div>
+          <h3>Scope &amp; Estimate</h3>
+          <p>Detailed walkthrough of all areas requiring reconstruction. We document everything and provide a transparent, line-item estimate.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-number"><span>02</span></div>
+          <h3>Material Sourcing</h3>
+          <p>We source matching materials -- drywall, flooring, trim profiles, paint colors -- ensuring consistency with your existing finishes.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-number"><span>03</span></div>
+          <h3>Build &amp; Install</h3>
+          <p>Our licensed crews handle framing, drywall, flooring, painting, trim, and all finish work with attention to quality and detail.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-number"><span>04</span></div>
+          <h3>Final Walkthrough</h3>
+          <p>We walk the completed project with you to ensure every detail meets your expectations before we consider the job complete.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ SECTION -->
+  <section class="faq-section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label" style="justify-content: center;">Frequently Asked Questions</div>
+        <h2>Reconstruction FAQs</h2>
+        <p>Common questions about the reconstruction process after mold remediation.</p>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Why can't I just hire my own contractor for reconstruction?
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              You absolutely can. However, using MoldGone for both remediation and reconstruction has advantages: we understand exactly what was removed and why, we can start reconstruction immediately after clearance (no scheduling gap), and we provide a single warranty covering the entire project. When separate contractors are involved, there's often finger-pointing if issues arise later.
+            </div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            How long does reconstruction take after mold remediation?
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Timelines depend on the scope of work. A single room with drywall, paint, and baseboard replacement typically takes 3-5 days. Larger projects involving multiple rooms, flooring, cabinetry, or structural repairs may take 2-4 weeks. We provide a detailed project timeline before any work begins, and we keep you updated throughout the process.
+            </div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Does insurance cover reconstruction after mold damage?
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              When your insurance policy covers the mold remediation, it typically also covers the reconstruction needed to restore the property to its pre-loss condition. MoldGone handles all insurance documentation, including detailed line-item estimates, progress photos, and completion reports. We work directly with your adjuster to streamline the claims process and maximize your coverage.
+            </div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Will the repaired areas match my existing walls and flooring?
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Matching is a top priority. We use computer color-matching for paint, source identical or closest-match flooring materials, and replicate existing wall textures (knockdown, orange peel, smooth, etc.). Our crews are experienced in blending new work into existing finishes. In most cases, you won't be able to tell where the remediation occurred once reconstruction is complete.
+            </div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Do you use mold-resistant materials during reconstruction?
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Yes. In areas prone to moisture -- bathrooms, basements, kitchens, and laundry rooms -- we use mold-resistant drywall (paperless or fiberglass-faced), mold-resistant paint and primers, and moisture-barrier insulation. These materials significantly reduce the likelihood of future mold growth while meeting or exceeding building code requirements.
+            </div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Can I upgrade materials during reconstruction instead of just replacing?
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Absolutely. Many homeowners use reconstruction as an opportunity to upgrade -- new tile instead of old vinyl, hardwood instead of carpet, or updated cabinetry. We'll provide pricing for both like-for-like replacement and upgrades so you can make an informed decision. Insurance covers the replacement cost; you pay the difference for any upgrades.
+            </div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            What warranty do you provide on reconstruction work?
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              All reconstruction work comes with a written workmanship warranty. This covers defects in installation, materials, and finishing. If something doesn't hold up -- a seam lifts, paint peels, or trim separates -- we come back and fix it at no additional cost. The specific warranty terms are outlined in your project agreement before work begins.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BAND -->
+  <section class="cta-band">
+    <div class="container">
+      <div class="cta-band-content">
+        <h2>Ready to Restore Your Property?</h2>
+        <p>From remediation to rebuild, MoldGone handles the entire process. Get a free estimate for reconstruction and let us return your space to pre-loss condition.</p>
+      </div>
+      <div class="cta-band-actions">
+        <a href="/contact-us/" class="btn-white">
+          Get Free Estimate
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+        <a href="tel:2409706533" class="btn-outline-white">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Call (240) 970-6533
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="../moldgone_logo.png" alt="MoldGone">
+          <p>Trusted mold remediation experts serving the D.C. and Baltimore metro areas. Licensed, insured, and IICRC certified. Serving residential and commercial properties across Maryland and Virginia since 2006.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Facebook">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="#" aria-label="Google">
+              <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+            </a>
+            <a href="https://www.yelp.com/biz/moldgone-silver-spring" aria-label="Yelp" target="_blank" rel="noopener">
+              <img class="social-icon-img" src="https://s3-media0.fl.yelpcdn.com/assets/public/burst_white.yji-69d3bd788c1013a1c15e.svg" alt="Yelp">
+            </a>
+            <a href="https://www.angi.com/companylist/us/md/silver-spring/moldgone-net-reviews-9498270.htm" aria-label="Angi" target="_blank" rel="noopener">
+              <img class="social-icon-img" src="https://media.angi.com/s3fs-public/Angi-logo-Orange.svg" alt="Angi" style="filter: brightness(0) invert(1);">
+            </a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="/remediation/">Mold Remediation</a></li>
+            <li><a href="/air-quality/">Air Quality Testing</a></li>
+            <li><a href="/reconstruction/">Reconstruction</a></li>
+            <li><a href="/know-you-have-mold/">Mold Assessment</a></li>
+            <li><a href="/services/">All Services</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="/about-us/">About Us</a></li>
+            <li><a href="/mold-remediation-gallery/">Project Gallery</a></li>
+            <li><a href="/submit-a-review/">Reviews</a></li>
+            <li><a href="/careers/">Careers</a></li>
+            <li><a href="/contact-us/">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <div class="footer-contact-item">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <a href="tel:2409706533">(240) 970-6533</a>
+          </div>
+          <div class="footer-contact-item">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            <a href="mailto:info@moldgone.net">info@moldgone.net</a>
+          </div>
+          <div class="footer-contact-item">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+            <p>Serving D.C., Baltimore<br>MD &amp; VA</p>
+          </div>
+          <div class="footer-contact-item">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <p>24/7 Emergency<br>Response Available</p>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 MoldGone.net. All rights reserved.</p>
+        <div class="footer-legal-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="/site-map/">Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Sticky header shadow
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      header.classList.toggle('scrolled', window.scrollY > 10);
+    });
+
+    // FAQ accordion
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.closest('.faq-item');
+        const isActive = item.classList.contains('active');
+        // Close all
+        document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+        document.querySelectorAll('.faq-question').forEach(b => b.setAttribute('aria-expanded', 'false'));
+        // Open clicked (if it wasn't already open)
+        if (!isActive) {
+          item.classList.add('active');
+          btn.setAttribute('aria-expanded', 'true');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
