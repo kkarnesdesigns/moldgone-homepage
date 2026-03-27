@@ -91,15 +91,16 @@
       overflow: hidden;
     }
 
-    .page-hero::before {
-      content: '';
+    .page-hero-grid-bg {
       position: absolute;
-      top: -200px;
-      right: -200px;
-      width: 600px;
-      height: 600px;
-      background: radial-gradient(circle, rgba(46, 163, 242, 0.08), transparent 70%);
-      pointer-events: none;
+      inset: 0;
+      z-index: 0;
+      background-image:
+        linear-gradient(to right, rgba(255,255,255,0.04) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255,255,255,0.04) 1px, transparent 1px);
+      background-size: 48px 48px;
+      mask-image: radial-gradient(ellipse at center, rgba(0,0,0,0.6), transparent 75%);
+      -webkit-mask-image: radial-gradient(ellipse at center, rgba(0,0,0,0.6), transparent 75%);
     }
 
     .page-hero .container {
@@ -613,6 +614,7 @@
 
   <!-- PAGE HERO -->
   <section class="page-hero">
+    <div class="page-hero-grid-bg"></div>
     <div class="container">
       <h1><span class="highlight">Family Owned.</span> Professionally Driven.</h1>
       <p>MoldGone is not a franchise. We're a family-owned mold remediation company that delivers professional, personalized service to residential properties, commercial spaces, and everything in between.</p>
